@@ -22,7 +22,7 @@ import {
 @NgModule({
     imports: [
         ManaProjectSharedModule,
-        RouterModule.forRoot(accountState, { useHash: true })
+        RouterModule.forRoot(accountState, { useHash: false })
     ],
     declarations: [
         ActivateComponent,

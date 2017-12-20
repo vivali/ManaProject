@@ -33,7 +33,7 @@ import {
 @NgModule({
     imports: [
         ManaProjectSharedModule,
-        RouterModule.forRoot(adminState, { useHash: true }),
+        RouterModule.forRoot(adminState, { useHash: false }),
         /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
     declarations: [
