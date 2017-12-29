@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     }
 
     register() {
+        this.registerAccount.login = this.registerAccount.email;
         if (this.registerAccount.password !== this.confirmPassword) {
             this.doNotMatch = 'ERROR';
         } else {

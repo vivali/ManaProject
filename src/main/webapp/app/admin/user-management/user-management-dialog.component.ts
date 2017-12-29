@@ -45,6 +45,7 @@ export class UserMgmtDialogComponent implements OnInit {
         if (this.user.id !== null) {
             this.userService.update(this.user).subscribe((response) => this.onSaveSuccess(response), () => this.onSaveError());
         } else {
+            this.user.login = this.user.email;
             this.userService.create(this.user).subscribe((response) => this.onSaveSuccess(response), () => this.onSaveError());
         }
     }
