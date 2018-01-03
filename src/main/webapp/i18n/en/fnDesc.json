@@ -1,0 +1,23 @@
+{
+    "manaProjectApp": {
+        "fnDesc" : {
+            "home": {
+                "title": "Fn Descs",
+                "createLabel": "Create a new Fn Desc",
+                "createOrEditLabel": "Create or edit a Fn Desc"
+            },
+            "created": "A new Fn Desc is created with identifier {{ param }}",
+            "updated": "A Fn Desc is updated with identifier {{ param }}",
+            "deleted": "A Fn Desc is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Fn Desc {{ id }}?"
+            },
+            "detail": {
+                "title": "Fn Desc"
+            },
+            "description": "Description",
+            "projectid": "Projectid",
+            "funneedid": "Funneedid"
+        }
+    }
+}

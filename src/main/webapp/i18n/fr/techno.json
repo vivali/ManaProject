@@ -1,0 +1,21 @@
+{
+    "manaProjectApp": {
+        "techno" : {
+            "home": {
+                "title": "Technos",
+                "createLabel": "Créer un nouveau Techno",
+                "createOrEditLabel": "Créer ou éditer un Techno"
+            },
+            "created": "Un nouveau Techno a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Techno avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Techno avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Techno {{ id }} ?"
+            },
+            "detail": {
+                "title": "Techno"
+            },
+            "title": "Title"
+        }
+    }
+}

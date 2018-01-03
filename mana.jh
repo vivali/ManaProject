@@ -1,0 +1,81 @@
+entity Experience {
+    id Integer required,
+    title String required
+}
+entity FuncNeed {
+    id Integer required,
+    title String required
+}
+entity Role {
+    id Integer required,
+    title String required
+}
+entity TechNeed {
+    id Integer required,
+    title String required
+}
+entity PreRelationships {
+    id Integer required,
+    number Integer required required
+}
+entity TnDesc {
+    id Integer required,
+    description String required
+}
+entity Project {
+    id Integer required,
+    title String required,
+    description String required,
+    picture String required,
+    man_day Integer required,
+    referent String required,
+    year Integer required
+}
+entity FnDesc {
+    id Integer required,
+    description String required,
+}
+
+entity User {
+    id Integer required,
+    email String required,
+    password String required,
+    firstname String required,
+    lastname String required
+}
+entity Version {
+    id Integer required,
+    number String required
+}
+entity Profile {
+    id Integer required,
+    title  String required
+}
+entity Techno {
+    id Integer required,
+    title String required
+}
+relationship ManyToOne {
+    PreRelationships{experience_id} to Experience,
+    PreRelationships{role_id} to Role,
+    PreRelationships{project_id} to Project,
+    TnDesc{tech_need_id} to TechNeed,
+    TnDesc{project_id} to Project,
+    Project{user_id} to User,
+    FnDesc{project_id} to Project,
+    FnDesc{fun_need_id} to FuncNeed,
+    Version{project_id} to Project,
+    Version{techno_id} to Techno
+}
+
+relationship OneToMany {
+Profile to User{profile_id}
+}
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
+//dto * with mapstruct
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+// Set an angular suffix
+//angularSuffix * with mySuffix

@@ -1,0 +1,23 @@
+{
+    "manaProjectApp": {
+        "version" : {
+            "home": {
+                "title": "Versions",
+                "createLabel": "Créer un nouveau Version",
+                "createOrEditLabel": "Créer ou éditer un Version"
+            },
+            "created": "Un nouveau Version a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Version avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Version avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Version {{ id }} ?"
+            },
+            "detail": {
+                "title": "Version"
+            },
+            "number": "Number",
+            "projectid": "Projectid",
+            "technoid": "Technoid"
+        }
+    }
+}

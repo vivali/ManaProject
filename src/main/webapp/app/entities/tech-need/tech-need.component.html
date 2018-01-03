@@ -1,0 +1,56 @@
+<div>
+    <h2>
+        <span jhiTranslate="manaProjectApp.techNeed.home.title">Tech Needs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-tech-need" [routerLink]="['/', { outlets: { popup: ['tech-need-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="manaProjectApp.techNeed.home.createLabel">
+            Create new Tech Need
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="techNeeds">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="manaProjectApp.techNeed.title">Title</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let techNeed of techNeeds ;trackBy: trackId">
+                <td><a [routerLink]="['../tech-need', techNeed.id ]">{{techNeed.id}}</a></td>
+                <td>{{techNeed.title}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../tech-need', techNeed.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tech-need/'+ techNeed.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tech-need/'+ techNeed.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

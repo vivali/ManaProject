@@ -1,0 +1,24 @@
+{
+    "manaProjectApp": {
+        "preRelationships" : {
+            "home": {
+                "title": "Pre Relationships",
+                "createLabel": "Create a new Pre Relationships",
+                "createOrEditLabel": "Create or edit a Pre Relationships"
+            },
+            "created": "A new Pre Relationships is created with identifier {{ param }}",
+            "updated": "A Pre Relationships is updated with identifier {{ param }}",
+            "deleted": "A Pre Relationships is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pre Relationships {{ id }}?"
+            },
+            "detail": {
+                "title": "Pre Relationships"
+            },
+            "number": "Number",
+            "experienceid": "Experienceid",
+            "roleid": "Roleid",
+            "projectid": "Projectid"
+        }
+    }
+}

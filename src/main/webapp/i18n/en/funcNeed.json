@@ -1,0 +1,21 @@
+{
+    "manaProjectApp": {
+        "funcNeed" : {
+            "home": {
+                "title": "Func Needs",
+                "createLabel": "Create a new Func Need",
+                "createOrEditLabel": "Create or edit a Func Need"
+            },
+            "created": "A new Func Need is created with identifier {{ param }}",
+            "updated": "A Func Need is updated with identifier {{ param }}",
+            "deleted": "A Func Need is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Func Need {{ id }}?"
+            },
+            "detail": {
+                "title": "Func Need"
+            },
+            "title": "Title"
+        }
+    }
+}

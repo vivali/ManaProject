@@ -1,0 +1,21 @@
+{
+    "manaProjectApp": {
+        "techno" : {
+            "home": {
+                "title": "Technos",
+                "createLabel": "Create a new Techno",
+                "createOrEditLabel": "Create or edit a Techno"
+            },
+            "created": "A new Techno is created with identifier {{ param }}",
+            "updated": "A Techno is updated with identifier {{ param }}",
+            "deleted": "A Techno is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Techno {{ id }}?"
+            },
+            "detail": {
+                "title": "Techno"
+            },
+            "title": "Title"
+        }
+    }
+}

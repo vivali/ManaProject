@@ -1,0 +1,23 @@
+{
+    "manaProjectApp": {
+        "tnDesc" : {
+            "home": {
+                "title": "Tn Descs",
+                "createLabel": "Create a new Tn Desc",
+                "createOrEditLabel": "Create or edit a Tn Desc"
+            },
+            "created": "A new Tn Desc is created with identifier {{ param }}",
+            "updated": "A Tn Desc is updated with identifier {{ param }}",
+            "deleted": "A Tn Desc is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Tn Desc {{ id }}?"
+            },
+            "detail": {
+                "title": "Tn Desc"
+            },
+            "description": "Description",
+            "techneedid": "Techneedid",
+            "projectid": "Projectid"
+        }
+    }
+}

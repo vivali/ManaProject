@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity FnDesc.
+    -->
+    <changeSet id="20180103100825-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="projectid_id"
+                                 baseTableName="fn_desc"
+                                 constraintName="fk_fn_desc_projectid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+        <addForeignKeyConstraint baseColumnNames="funneedid_id"
+                                 baseTableName="fn_desc"
+                                 constraintName="fk_fn_desc_funneedid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="func_need"/>
+
+    </changeSet>
+</databaseChangeLog>

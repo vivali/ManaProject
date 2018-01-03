@@ -1,0 +1,49 @@
+
+<div *ngIf="project">
+    <h2><span jhiTranslate="manaProjectApp.project.detail.title">Project</span> {{project.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="manaProjectApp.project.title">Title</span></dt>
+        <dd>
+            <span>{{project.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.project.description">Description</span></dt>
+        <dd>
+            <span>{{project.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.project.picture">Picture</span></dt>
+        <dd>
+            <span>{{project.picture}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.project.manday">Manday</span></dt>
+        <dd>
+            <span>{{project.manday}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.project.referent">Referent</span></dt>
+        <dd>
+            <span>{{project.referent}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.project.year">Year</span></dt>
+        <dd>
+            <span>{{project.year}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.project.userid">Userid</span></dt>
+        <dd>
+            {{project.userid?.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

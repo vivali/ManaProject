@@ -1,0 +1,37 @@
+
+<div *ngIf="version">
+    <h2><span jhiTranslate="manaProjectApp.version.detail.title">Version</span> {{version.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="manaProjectApp.version.number">Number</span></dt>
+        <dd>
+            <span>{{version.number}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.version.projectid">Projectid</span></dt>
+        <dd>
+            <div *ngIf="version.projectid">
+                <a [routerLink]="['/project', version.projectid?.id]">{{version.projectid?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.version.technoid">Technoid</span></dt>
+        <dd>
+            <div *ngIf="version.technoid">
+                <a [routerLink]="['/techno', version.technoid?.id]">{{version.technoid?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

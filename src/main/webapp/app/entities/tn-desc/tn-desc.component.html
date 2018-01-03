@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="manaProjectApp.tnDesc.home.title">Tn Descs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-tn-desc" [routerLink]="['/', { outlets: { popup: ['tn-desc-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="manaProjectApp.tnDesc.home.createLabel">
+            Create new Tn Desc
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="tnDescs">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="manaProjectApp.tnDesc.description">Description</span></th>
+            <th><span jhiTranslate="manaProjectApp.tnDesc.techneedid">Techneedid</span></th>
+            <th><span jhiTranslate="manaProjectApp.tnDesc.projectid">Projectid</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tnDesc of tnDescs ;trackBy: trackId">
+                <td><a [routerLink]="['../tn-desc', tnDesc.id ]">{{tnDesc.id}}</a></td>
+                <td>{{tnDesc.description}}</td>
+                <td>
+                    <div *ngIf="tnDesc.techneedid">
+                        <a [routerLink]="['../tech-need', tnDesc.techneedid?.id ]" >{{tnDesc.techneedid?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="tnDesc.projectid">
+                        <a [routerLink]="['../project', tnDesc.projectid?.id ]" >{{tnDesc.projectid?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../tn-desc', tnDesc.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tn-desc/'+ tnDesc.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'tn-desc/'+ tnDesc.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

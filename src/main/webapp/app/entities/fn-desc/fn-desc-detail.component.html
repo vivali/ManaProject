@@ -1,0 +1,37 @@
+
+<div *ngIf="fnDesc">
+    <h2><span jhiTranslate="manaProjectApp.fnDesc.detail.title">Fn Desc</span> {{fnDesc.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="manaProjectApp.fnDesc.description">Description</span></dt>
+        <dd>
+            <span>{{fnDesc.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.fnDesc.projectid">Projectid</span></dt>
+        <dd>
+            <div *ngIf="fnDesc.projectid">
+                <a [routerLink]="['/project', fnDesc.projectid?.id]">{{fnDesc.projectid?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.fnDesc.funneedid">Funneedid</span></dt>
+        <dd>
+            <div *ngIf="fnDesc.funneedid">
+                <a [routerLink]="['/func-need', fnDesc.funneedid?.id]">{{fnDesc.funneedid?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'fn-desc/'+ fnDesc.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

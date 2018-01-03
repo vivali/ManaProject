@@ -1,0 +1,43 @@
+
+<div *ngIf="preRelationships">
+    <h2><span jhiTranslate="manaProjectApp.preRelationships.detail.title">Pre Relationships</span> {{preRelationships.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="manaProjectApp.preRelationships.number">Number</span></dt>
+        <dd>
+            <span>{{preRelationships.number}}</span>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.preRelationships.experienceid">Experienceid</span></dt>
+        <dd>
+            <div *ngIf="preRelationships.experienceid">
+                <a [routerLink]="['/experience', preRelationships.experienceid?.id]">{{preRelationships.experienceid?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.preRelationships.roleid">Roleid</span></dt>
+        <dd>
+            <div *ngIf="preRelationships.roleid">
+                <a [routerLink]="['/role', preRelationships.roleid?.id]">{{preRelationships.roleid?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="manaProjectApp.preRelationships.projectid">Projectid</span></dt>
+        <dd>
+            <div *ngIf="preRelationships.projectid">
+                <a [routerLink]="['/project', preRelationships.projectid?.id]">{{preRelationships.projectid?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'pre-relationships/'+ preRelationships.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

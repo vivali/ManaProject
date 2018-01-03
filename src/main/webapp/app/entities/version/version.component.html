@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="manaProjectApp.version.home.title">Versions</span>
+        <button class="btn btn-primary float-right jh-create-entity create-version" [routerLink]="['/', { outlets: { popup: ['version-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="manaProjectApp.version.home.createLabel">
+            Create new Version
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="versions">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="manaProjectApp.version.number">Number</span></th>
+            <th><span jhiTranslate="manaProjectApp.version.projectid">Projectid</span></th>
+            <th><span jhiTranslate="manaProjectApp.version.technoid">Technoid</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let version of versions ;trackBy: trackId">
+                <td><a [routerLink]="['../version', version.id ]">{{version.id}}</a></td>
+                <td>{{version.number}}</td>
+                <td>
+                    <div *ngIf="version.projectid">
+                        <a [routerLink]="['../project', version.projectid?.id ]" >{{version.projectid?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="version.technoid">
+                        <a [routerLink]="['../techno', version.technoid?.id ]" >{{version.technoid?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../version', version.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

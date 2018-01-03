@@ -7,6 +7,17 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
+                "experience": "Experience",
+                "funcNeed": "Func Need",
+                "role": "Role",
+                "techNeed": "Tech Need",
+                "preRelationships": "Pre Relationships",
+                "tnDesc": "Tn Desc",
+                "project": "Project",
+                "fnDesc": "Fn Desc",
+                "version": "Version",
+                "profile": "Profile",
+                "techno": "Techno",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

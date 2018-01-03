@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PreRelationships.
+    -->
+    <changeSet id="20180103100822-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="experienceid_id"
+                                 baseTableName="pre_relationships"
+                                 constraintName="fk_pre_relationships_experienceid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="experience"/>
+
+        <addForeignKeyConstraint baseColumnNames="roleid_id"
+                                 baseTableName="pre_relationships"
+                                 constraintName="fk_pre_relationships_roleid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="role"/>
+
+        <addForeignKeyConstraint baseColumnNames="projectid_id"
+                                 baseTableName="pre_relationships"
+                                 constraintName="fk_pre_relationships_projectid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+    </changeSet>
+</databaseChangeLog>

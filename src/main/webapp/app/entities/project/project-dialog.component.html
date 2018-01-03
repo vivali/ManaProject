@@ -1,0 +1,106 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myProjectLabel" jhiTranslate="manaProjectApp.project.home.createOrEditLabel">Create or edit a Project</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!project.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="project.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                [(ngModel)]="project.title" required />
+            <div [hidden]="!(editForm.controls.title?.dirty && editForm.controls.title?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.title?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                [(ngModel)]="project.description" required />
+            <div [hidden]="!(editForm.controls.description?.dirty && editForm.controls.description?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.description?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.picture" for="field_picture">Picture</label>
+            <input type="text" class="form-control" name="picture" id="field_picture"
+                [(ngModel)]="project.picture" required />
+            <div [hidden]="!(editForm.controls.picture?.dirty && editForm.controls.picture?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.picture?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.manday" for="field_manday">Manday</label>
+            <input type="number" class="form-control" name="manday" id="field_manday"
+                [(ngModel)]="project.manday" required />
+            <div [hidden]="!(editForm.controls.manday?.dirty && editForm.controls.manday?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.manday?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.manday?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.referent" for="field_referent">Referent</label>
+            <input type="text" class="form-control" name="referent" id="field_referent"
+                [(ngModel)]="project.referent" required />
+            <div [hidden]="!(editForm.controls.referent?.dirty && editForm.controls.referent?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.referent?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.year" for="field_year">Year</label>
+            <input type="number" class="form-control" name="year" id="field_year"
+                [(ngModel)]="project.year" required />
+            <div [hidden]="!(editForm.controls.year?.dirty && editForm.controls.year?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.year?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                    [hidden]="!editForm.controls.year?.errors?.number" jhiTranslate="entity.validation.number">
+                    This field should be a number.
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="manaProjectApp.project.userid" for="field_userid">Userid</label>
+            <select class="form-control" id="field_userid" name="userid" [(ngModel)]="project.userid" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id === project.userid?.id ? project.userid : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

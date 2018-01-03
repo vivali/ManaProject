@@ -44,6 +44,18 @@ public class CacheConfiguration {
             cm.createCache(fr.lfml.manaproject.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(fr.lfml.manaproject.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(fr.lfml.manaproject.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Experience.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.FuncNeed.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Role.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.TechNeed.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.PreRelationships.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.TnDesc.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Project.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.FnDesc.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Version.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Profile.class.getName(), jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Profile.class.getName() + ".users", jcacheConfiguration);
+            cm.createCache(fr.lfml.manaproject.domain.Techno.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
