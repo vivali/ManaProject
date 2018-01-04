@@ -2,22 +2,22 @@
     "manaProjectApp": {
         "fnDesc" : {
             "home": {
-                "title": "Besoins Fonctionnels",
-                "createLabel": "Créer un nouveau Fn Desc",
-                "createOrEditLabel": "Créer ou éditer un Fn Desc"
+                "title": "Description des besoins fonctionnels",
+                "createLabel": "Créer une nouvelle description",
+                "createOrEditLabel": "Créer ou éditer une description"
             },
-            "created": "Un nouveau Fn Desc a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Fn Desc avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Fn Desc avec l'identifiant {{ param }} a été supprimé",
+            "created": "Une nouvelle description de besoin fonctionnel a été créé avec l'identifiant {{ param }}",
+            "updated": "La nouvelle description de besoin fonctionnel avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "La nouvelle description de besoin fonctionnel avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Fn Desc {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Fn Desc"
+                "title": "Description des besoins fonctionnels"
             },
             "description": "Description",
-            "projectid": "Projectid",
-            "funcneedid": "funcneedid"
+            "projectid": "Project",
+            "funcneedid": "besoin fonctionnel"
         }
     }
 }

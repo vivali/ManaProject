@@ -2,18 +2,18 @@
     "manaProjectApp": {
         "funcNeed" : {
             "home": {
-                "title": "Func Needs",
-                "createLabel": "Create a new Func Need",
-                "createOrEditLabel": "Create or edit a Func Need"
+                "title": "Functional needs",
+                "createLabel": "Create a new functional need",
+                "createOrEditLabel": "Create or edit a functional need"
             },
-            "created": "A new Func Need is created with identifier {{ param }}",
-            "updated": "A Func Need is updated with identifier {{ param }}",
-            "deleted": "A Func Need is deleted with identifier {{ param }}",
+            "created": "A new functional need is created with identifier {{ param }}",
+            "updated": "A functional need is updated with identifier {{ param }}",
+            "deleted": "A functional need is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Func Need {{ id }}?"
+                "question": "Are you sure you want to delete {{ id }}?"
             },
             "detail": {
-                "title": "Func Need"
+                "title": "Functional needs"
             },
             "title": "Title"
         }

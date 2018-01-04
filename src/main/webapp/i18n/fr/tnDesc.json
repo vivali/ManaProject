@@ -2,22 +2,22 @@
     "manaProjectApp": {
         "tnDesc" : {
             "home": {
-                "title": "TnDescs",
-                "createLabel": "Créer un nouveau Tn Desc",
-                "createOrEditLabel": "Créer ou éditer un Tn Desc"
+                "title": "Description des technologies",
+                "createLabel": "Créer une nouvelle description",
+                "createOrEditLabel": "Créer ou éditer une description"
             },
-            "created": "Un nouveau Tn Desc a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Tn Desc avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Tn Desc avec l'identifiant {{ param }} a été supprimé",
+            "created": "Une nouvelle Tn Desc a été créé avec l'identifiant {{ param }}",
+            "updated": "La description avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "La description avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Tn Desc {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Tn Desc"
+                "title": "Description des technologies"
             },
             "description": "Description",
-            "techneedid": "Techneedid",
-            "projectid": "Projectid"
+            "techneedid": "Techno",
+            "projectid": "Projet"
         }
     }
 }

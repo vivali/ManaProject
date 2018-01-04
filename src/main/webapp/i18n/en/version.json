@@ -16,8 +16,8 @@
                 "title": "Version"
             },
             "number": "Number",
-            "projectid": "Projectid",
-            "technoid": "Technoid"
+            "projectid": "Project",
+            "technoid": "Technology used"
         }
     }
 }

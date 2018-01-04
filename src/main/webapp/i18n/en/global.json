@@ -6,18 +6,18 @@
             "home": "Home",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
-                "main": "Entities",
+                "main": "Menu",
                 "experience": "Experience",
-                "funcNeed": "Func Need",
+                "funcNeed": "Functional needs",
                 "role": "Role",
-                "techNeed": "Tech Need",
-                "preRelationships": "Pre Relationships",
-                "tnDesc": "Tn Desc",
-                "project": "Project",
-                "fnDesc": "Fn Desc",
+                "techNeed": "Technical needs",
+                "preRelationships": "Project contributors",
+                "tnDesc": "Technical needs description",
+                "project": "Projects",
+                "fnDesc": "Functional needs description",
                 "version": "Version",
                 "profile": "Profile",
-                "techno": "Techno",
+                "techno": "Technologies",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -139,5 +139,5 @@
         "emailexists": "Email is already in use!",
         "idexists": "A new {{ entityName }} cannot already have an ID"
     },
-    "footer": "This is your footer"
+    "footer": "About us"
 }

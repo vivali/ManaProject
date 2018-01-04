@@ -2,20 +2,20 @@
     "manaProjectApp": {
         "techno" : {
             "home": {
-                "title": "Technos",
-                "createLabel": "Créer un nouveau Techno",
-                "createOrEditLabel": "Créer ou éditer un Techno"
+                "title": "Technologies",
+                "createLabel": "Créer une nouvelle technologie",
+                "createOrEditLabel": "Créer ou éditer une nouvelle technologie"
             },
-            "created": "Un nouveau Techno a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Techno avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Techno avec l'identifiant {{ param }} a été supprimé",
+            "created": "Une nouvelle technologie a été créé avec l'identifiant {{ param }}",
+            "updated": "La technologie avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "La technologie avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Techno {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Techno"
+                "title": "Technologies"
             },
-            "title": "Title"
+            "title": "Titre"
         }
     }
 }

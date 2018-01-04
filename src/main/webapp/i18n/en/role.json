@@ -3,14 +3,14 @@
         "role" : {
             "home": {
                 "title": "Roles",
-                "createLabel": "Create a new Role",
-                "createOrEditLabel": "Create or edit a Role"
+                "createLabel": "Create a new role",
+                "createOrEditLabel": "Create or edit a role"
             },
-            "created": "A new Role is created with identifier {{ param }}",
-            "updated": "A Role is updated with identifier {{ param }}",
-            "deleted": "A Role is deleted with identifier {{ param }}",
+            "created": "A new role is created with identifier {{ param }}",
+            "updated": "A role is updated with identifier {{ param }}",
+            "deleted": "A role is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Role {{ id }}?"
+                "question": "Are you sure you want to delete {{ id }}?"
             },
             "detail": {
                 "title": "Role"

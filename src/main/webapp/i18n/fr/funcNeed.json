@@ -2,18 +2,18 @@
     "manaProjectApp": {
         "funcNeed" : {
             "home": {
-                "title": "FuncNeeds",
-                "createLabel": "Créer un nouveau Func Need",
-                "createOrEditLabel": "Créer ou éditer un Func Need"
+                "title": "Besoins fonctionnels",
+                "createLabel": "Créer un nouveau besoin fonctionnel",
+                "createOrEditLabel": "Créer ou éditer un besoin fonctionnel"
             },
-            "created": "Un nouveau Func Need a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Func Need avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Func Need avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau besoin fonctionnel a été créé avec l'identifiant {{ param }}",
+            "updated": "Le besoin fonctionnel avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le besoin fonctionnel avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Func Need {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Func Need"
+                "title": "Besoin fonctionnels"
             },
             "title": "Title"
         }
