@@ -2,7 +2,7 @@
     "manaProjectApp": {
         "tnDesc" : {
             "home": {
-                "title": "Description des technologies",
+                "title": "Description des besoins techniques",
                 "createLabel": "Créer une nouvelle description",
                 "createOrEditLabel": "Créer ou éditer une description"
             },
@@ -13,10 +13,10 @@
                 "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Description des technologies"
+                "title": "Description des besoins techniques"
             },
             "description": "Description",
-            "techneedid": "Techno",
+            "techneedid": "Besoin technique",
             "projectid": "Projet"
         }
     }
