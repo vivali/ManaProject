@@ -32,14 +32,14 @@
             <label class="form-control-label" jhiTranslate="manaProjectApp.preRelationships.experienceid" for="field_experienceid">Experienceid</label>
             <select class="form-control" id="field_experienceid" name="experienceid" [(ngModel)]="preRelationships.experienceid" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="experienceOption.id === preRelationships.experienceid?.id ? preRelationships.experienceid : experienceOption" *ngFor="let experienceOption of experiences; trackBy: trackExperienceById">{{experienceOption.id}}</option>
+                <option [ngValue]="experienceOption.id === preRelationships.experienceid?.id ? preRelationships.experienceid : experienceOption" *ngFor="let experienceOption of experiences; trackBy: trackExperienceById">{{experienceOption.title}}</option>
             </select>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="manaProjectApp.preRelationships.roleid" for="field_roleid">Roleid</label>
             <select class="form-control" id="field_roleid" name="roleid" [(ngModel)]="preRelationships.roleid" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="roleOption.id === preRelationships.roleid?.id ? preRelationships.roleid : roleOption" *ngFor="let roleOption of roles; trackBy: trackRoleById">{{roleOption.id}}</option>
+                <option [ngValue]="roleOption.id === preRelationships.roleid?.id ? preRelationships.roleid : roleOption" *ngFor="let roleOption of roles; trackBy: trackRoleById">{{roleOption.title}}</option>
             </select>
         </div>
         <div class="form-group">

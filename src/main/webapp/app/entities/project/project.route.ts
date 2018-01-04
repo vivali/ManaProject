@@ -14,7 +14,7 @@ export const projectRoute: Routes = [
         path: 'project',
         component: ProjectComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const projectRoute: Routes = [
         path: 'project/:id',
         component: ProjectDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const projectPopupRoute: Routes = [
         path: 'project-new',
         component: ProjectPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const projectPopupRoute: Routes = [
         path: 'project/:id/edit',
         component: ProjectPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const projectPopupRoute: Routes = [
         path: 'project/:id/delete',
         component: ProjectDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService],

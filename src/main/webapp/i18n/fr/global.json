@@ -16,7 +16,6 @@
                 "project": "Project",
                 "fnDesc": "Fn Desc",
                 "version": "Version",
-                "profile": "Profile",
                 "techno": "Techno",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },

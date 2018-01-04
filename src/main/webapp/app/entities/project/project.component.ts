@@ -12,7 +12,7 @@ import { ITEMS_PER_PAGE, Principal, ResponseWrapper } from '../../shared';
     templateUrl: './project.component.html'
 })
 export class ProjectComponent implements OnInit, OnDestroy {
-projects: Project[];
+    projects: Project[];
     currentAccount: any;
     eventSubscriber: Subscription;
 

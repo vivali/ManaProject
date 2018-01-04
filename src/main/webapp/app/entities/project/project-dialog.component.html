@@ -88,11 +88,7 @@
         </div>
 
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="manaProjectApp.project.userid" for="field_userid">Userid</label>
-            <select class="form-control" id="field_userid" name="userid" [(ngModel)]="project.userid" >
-                <option [ngValue]="null"></option>
-                <option [ngValue]="userOption.id === project.userid?.id ? project.userid : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.id}}</option>
-            </select>
+            <input type="hidden" class="form-control" id="field_userid" name="user" [(ngModel)]="project.user" />
         </div>
     </div>
     <div class="modal-footer">

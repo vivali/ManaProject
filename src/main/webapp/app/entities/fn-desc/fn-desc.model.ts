@@ -5,7 +5,7 @@ export class FnDesc implements BaseEntity {
         public id?: number,
         public description?: string,
         public projectid?: BaseEntity,
-        public funneedid?: BaseEntity,
+        public funcneedid?: BaseEntity,
     ) {
     }
 }

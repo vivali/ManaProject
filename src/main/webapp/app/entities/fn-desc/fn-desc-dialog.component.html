@@ -32,10 +32,10 @@
             </select>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="manaProjectApp.fnDesc.funneedid" for="field_funneedid">Funneedid</label>
-            <select class="form-control" id="field_funneedid" name="funneedid" [(ngModel)]="fnDesc.funneedid" >
+            <label class="form-control-label" jhiTranslate="manaProjectApp.fnDesc.funcneedid" for="field_funcneedid">funcneedid</label>
+            <select class="form-control" id="field_funcneedid" name="funcneedid" [(ngModel)]="fnDesc.funcneedid" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="funcNeedOption.id === fnDesc.funneedid?.id ? fnDesc.funneedid : funcNeedOption" *ngFor="let funcNeedOption of funcneeds; trackBy: trackFuncNeedById">{{funcNeedOption.id}}</option>
+                <option [ngValue]="funcNeedOption.id === fnDesc.funcneedid?.id ? fnDesc.funcneedid : funcNeedOption" *ngFor="let funcNeedOption of funcneeds; trackBy: trackFuncNeedById">{{funcNeedOption.id}}</option>
             </select>
         </div>
     </div>

@@ -9,7 +9,6 @@ import { ManaProjectTnDescModule } from './tn-desc/tn-desc.module';
 import { ManaProjectProjectModule } from './project/project.module';
 import { ManaProjectFnDescModule } from './fn-desc/fn-desc.module';
 import { ManaProjectVersionModule } from './version/version.module';
-import { ManaProjectProfileModule } from './profile/profile.module';
 import { ManaProjectTechnoModule } from './techno/techno.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
@@ -24,7 +23,6 @@ import { ManaProjectTechnoModule } from './techno/techno.module';
         ManaProjectProjectModule,
         ManaProjectFnDescModule,
         ManaProjectVersionModule,
-        ManaProjectProfileModule,
         ManaProjectTechnoModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],

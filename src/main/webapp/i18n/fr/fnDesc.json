@@ -2,7 +2,7 @@
     "manaProjectApp": {
         "fnDesc" : {
             "home": {
-                "title": "FnDescs",
+                "title": "Besoins Fonctionnels",
                 "createLabel": "Créer un nouveau Fn Desc",
                 "createOrEditLabel": "Créer ou éditer un Fn Desc"
             },
@@ -17,7 +17,7 @@
             },
             "description": "Description",
             "projectid": "Projectid",
-            "funneedid": "Funneedid"
+            "funcneedid": "funcneedid"
         }
     }
 }

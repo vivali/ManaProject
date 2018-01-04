@@ -1,10 +1,12 @@
 package fr.lfml.manaproject.repository;
 
-import fr.lfml.manaproject.domain.Project;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import org.springframework.data.jpa.repository.*;
-import java.util.List;
+import fr.lfml.manaproject.domain.Project;
 
 /**
  * Spring Data JPA repository for the Project entity.
@@ -13,7 +15,7 @@ import java.util.List;
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
 
-    @Query("select project from Project project where project.userid.login = ?#{principal.username}")
-    List<Project> findByUseridIsCurrentUser();
+	@Query("select project from Project project where project.user.login = ?#{principal.username}")
+	List<Project> findByUseridIsCurrentUser();
 
 }

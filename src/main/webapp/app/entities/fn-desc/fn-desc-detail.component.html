@@ -14,10 +14,10 @@
                 <a [routerLink]="['/project', fnDesc.projectid?.id]">{{fnDesc.projectid?.id}}</a>
             </div>
         </dd>
-        <dt><span jhiTranslate="manaProjectApp.fnDesc.funneedid">Funneedid</span></dt>
+        <dt><span jhiTranslate="manaProjectApp.fnDesc.funcneedid">funcneedid</span></dt>
         <dd>
-            <div *ngIf="fnDesc.funneedid">
-                <a [routerLink]="['/func-need', fnDesc.funneedid?.id]">{{fnDesc.funneedid?.id}}</a>
+            <div *ngIf="fnDesc.funcneedid">
+                <a [routerLink]="['/func-need', fnDesc.funcneedid?.id]">{{fnDesc.funcneedid?.id}}</a>
             </div>
         </dd>
     </dl>
