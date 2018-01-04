@@ -14,7 +14,7 @@ export const projectRoute: Routes = [
         path: 'project',
         component: ProjectComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_USER', 'ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const projectRoute: Routes = [
         path: 'project/:id',
         component: ProjectDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_USER', 'ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.project.home.title'
         },
         canActivate: [UserRouteAccessService]

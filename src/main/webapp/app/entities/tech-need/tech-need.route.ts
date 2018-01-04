@@ -14,7 +14,7 @@ export const techNeedRoute: Routes = [
         path: 'tech-need',
         component: TechNeedComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techNeed.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const techNeedRoute: Routes = [
         path: 'tech-need/:id',
         component: TechNeedDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techNeed.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const techNeedPopupRoute: Routes = [
         path: 'tech-need-new',
         component: TechNeedPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techNeed.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const techNeedPopupRoute: Routes = [
         path: 'tech-need/:id/edit',
         component: TechNeedPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techNeed.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const techNeedPopupRoute: Routes = [
         path: 'tech-need/:id/delete',
         component: TechNeedDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techNeed.home.title'
         },
         canActivate: [UserRouteAccessService],
