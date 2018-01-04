@@ -3,21 +3,21 @@
         "version" : {
             "home": {
                 "title": "Versions",
-                "createLabel": "Créer un nouveau Version",
-                "createOrEditLabel": "Créer ou éditer un Version"
+                "createLabel": "Créer une nouvelle version",
+                "createOrEditLabel": "Créer ou éditer une nouvelle version"
             },
-            "created": "Un nouveau Version a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Version avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Version avec l'identifiant {{ param }} a été supprimé",
+            "created": "Une nouvelle version a été créé avec l'identifiant {{ param }}",
+            "updated": "La version avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "La version avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Version {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer la version {{ id }} ?"
             },
             "detail": {
                 "title": "Version"
             },
-            "number": "Number",
-            "projectid": "Projectid",
-            "technoid": "Technoid"
+            "number": "Numéro",
+            "projectid": "Projet",
+            "technoid": "Techno"
         }
     }
 }

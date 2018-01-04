@@ -2,20 +2,20 @@
     "manaProjectApp": {
         "role" : {
             "home": {
-                "title": "Roles",
-                "createLabel": "Créer un nouveau Role",
-                "createOrEditLabel": "Créer ou éditer un Role"
+                "title": "Rôles",
+                "createLabel": "Créer un nouveau rôle",
+                "createOrEditLabel": "Créer ou éditer un rôle"
             },
-            "created": "Un nouveau Role a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Role avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Role avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau rôle a été créé avec l'identifiant {{ param }}",
+            "updated": "Le rôle avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le rôle avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Role {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer le rôle {{ id }} ?"
             },
             "detail": {
-                "title": "Role"
+                "title": "Rôle"
             },
-            "title": "Title"
+            "title": "Titre"
         }
     }
 }

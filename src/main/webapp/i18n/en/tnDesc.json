@@ -2,22 +2,22 @@
     "manaProjectApp": {
         "tnDesc" : {
             "home": {
-                "title": "Tn Descs",
-                "createLabel": "Create a new Tn Desc",
-                "createOrEditLabel": "Create or edit a Tn Desc"
+                "title": "Technical needs description",
+                "createLabel": "Create a new description for technical needs",
+                "createOrEditLabel": "Create or edit description"
             },
-            "created": "A new Tn Desc is created with identifier {{ param }}",
-            "updated": "A Tn Desc is updated with identifier {{ param }}",
-            "deleted": "A Tn Desc is deleted with identifier {{ param }}",
+            "created": "A new description is created with identifier {{ param }}",
+            "updated": "A description is updated with identifier {{ param }}",
+            "deleted": "A description is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Tn Desc {{ id }}?"
+                "question": "Are you sure you want to delete the description {{ id }}?"
             },
             "detail": {
-                "title": "Tn Desc"
+                "title": "Technical needs description"
             },
             "description": "Description",
-            "techneedid": "Techneedid",
-            "projectid": "Projectid"
+            "techneedid": "technical need",
+            "projectid": "Project"
         }
     }
 }

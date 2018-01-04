@@ -6,17 +6,17 @@
             "home": "Accueil",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
-                "main": "Entités",
-                "experience": "Experience",
-                "funcNeed": "Func Need",
-                "role": "Role",
-                "techNeed": "Tech Need",
-                "preRelationships": "Pre Relationships",
-                "tnDesc": "Tn Desc",
-                "project": "Project",
-                "fnDesc": "Fn Desc",
+                "main": "Menu",
+                "experience": "Niveau d'expérience",
+                "funcNeed": "Besoins fonctionnels",
+                "role": "Roles",
+                "techNeed": "Besoins techniques",
+                "preRelationships": "Contributeurs au projet",
+                "tnDesc": "Description des besoins techniques",
+                "project": "Projets",
+                "fnDesc": "Description des besoins fonctionnels",
                 "version": "Version",
-                "techno": "Techno",
+                "techno": "Technologies",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -138,5 +138,5 @@
         "emailexists": "Email déjà utilisé !",
         "idexists": "Une nouvelle entité {{entityName}} ne peut pas avoir d'ID !"
     },
-    "footer": "Ceci est votre pied de page"
+    "footer": "A propos de nous"
 }

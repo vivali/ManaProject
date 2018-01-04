@@ -2,20 +2,20 @@
     "manaProjectApp": {
         "techNeed" : {
             "home": {
-                "title": "TechNeeds",
-                "createLabel": "Créer un nouveau Tech Need",
-                "createOrEditLabel": "Créer ou éditer un Tech Need"
+                "title": "Besoins Techniques",
+                "createLabel": "Créer un nouveau besoin technique",
+                "createOrEditLabel": "Créer ou éditer un besoin technique"
             },
-            "created": "Un nouveau Tech Need a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Tech Need avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Tech Need avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau besoin technique a été créé avec l'identifiant {{ param }}",
+            "updated": "Le besoin technique avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le besoin technique avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Tech Need {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Tech Need"
+                "title": "Besoins Techniques"
             },
-            "title": "Title"
+            "title": "Titre"
         }
     }
 }

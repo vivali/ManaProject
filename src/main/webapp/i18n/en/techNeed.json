@@ -2,18 +2,18 @@
     "manaProjectApp": {
         "techNeed" : {
             "home": {
-                "title": "Tech Needs",
-                "createLabel": "Create a new Tech Need",
-                "createOrEditLabel": "Create or edit a Tech Need"
+                "title": "Technical needs",
+                "createLabel": "Create a new technical need",
+                "createOrEditLabel": "Create or edit a technical need"
             },
-            "created": "A new Tech Need is created with identifier {{ param }}",
-            "updated": "A Tech Need is updated with identifier {{ param }}",
-            "deleted": "A Tech Need is deleted with identifier {{ param }}",
+            "created": "A new technical need is created with identifier {{ param }}",
+            "updated": "A technical need is updated with identifier {{ param }}",
+            "deleted": "A technical need is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Tech Need {{ id }}?"
+                "question": "Are you sure you want to delete {{ id }}?"
             },
             "detail": {
-                "title": "Tech Need"
+                "title": "Technical needs"
             },
             "title": "Title"
         }

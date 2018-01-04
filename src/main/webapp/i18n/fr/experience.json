@@ -3,14 +3,14 @@
         "experience" : {
             "home": {
                 "title": "Experiences",
-                "createLabel": "Créer un nouveau Experience",
-                "createOrEditLabel": "Créer ou éditer un Experience"
+                "createLabel": "Créer un nouveau niveau d'expérience",
+                "createOrEditLabel": "Créer ou éditer un niveau d'expérience"
             },
-            "created": "Un nouveau Experience a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Experience avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Experience avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau niveau d'expérience a été créé avec l'identifiant {{ param }}",
+            "updated": "Le niveau d'expérience avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le niveau d'expérience avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Experience {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer le niveau d'expérience {{ id }} ?"
             },
             "detail": {
                 "title": "Experience"

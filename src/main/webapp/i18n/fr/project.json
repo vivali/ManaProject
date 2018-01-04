@@ -2,26 +2,26 @@
     "manaProjectApp": {
         "project" : {
             "home": {
-                "title": "Projects",
-                "createLabel": "Créer un nouveau Project",
-                "createOrEditLabel": "Créer ou éditer un Project"
+                "title": "Projets",
+                "createLabel": "Créer un nouveau projet",
+                "createOrEditLabel": "Créer ou éditer un projet"
             },
-            "created": "Un nouveau Project a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Project avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Project avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau projet a été créé avec l'identifiant {{ param }}",
+            "updated": "Le projet avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le projet avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Project {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer le projet {{ id }} ?"
             },
             "detail": {
-                "title": "Project"
+                "title": "Projet"
             },
-            "title": "Title",
+            "title": "Titre",
             "description": "Description",
-            "picture": "Picture",
-            "manday": "Manday",
-            "referent": "Referent",
-            "year": "Year",
-            "userid": "Userid"
+            "picture": "Photo",
+            "manday": "Jours-hommes",
+            "referent": "Référent",
+            "year": "Année",
+            "userid": "Utilisateur"
         }
     }
 }

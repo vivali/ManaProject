@@ -2,23 +2,23 @@
     "manaProjectApp": {
         "preRelationships" : {
             "home": {
-                "title": "PreRelationships",
-                "createLabel": "Créer un nouveau Pre Relationships",
-                "createOrEditLabel": "Créer ou éditer un Pre Relationships"
+                "title": "Contributeurs au projet",
+                "createLabel": "Créer un nouveau contributeur",
+                "createOrEditLabel": "Créer ou éditer un contributeur"
             },
-            "created": "Un nouveau Pre Relationships a été créé avec l'identifiant {{ param }}",
-            "updated": "Le Pre Relationships avec l'identifiant {{ param }} a été mis à jour",
-            "deleted": "Le Pre Relationships avec l'identifiant {{ param }} a été supprimé",
+            "created": "Un nouveau contributeur a été créé avec l'identifiant {{ param }}",
+            "updated": "Le contributeur avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le contributeur avec l'identifiant {{ param }} a été supprimé",
             "delete": {
-                "question": "Etes-vous certain de vouloir supprimer le Pre Relationships {{ id }} ?"
+                "question": "Etes-vous certain de vouloir supprimer {{ id }} ?"
             },
             "detail": {
-                "title": "Pre Relationships"
+                "title": "Contributeurs au projet"
             },
-            "number": "Number",
-            "experienceid": "Experienceid",
-            "roleid": "Roleid",
-            "projectid": "Projectid"
+            "number": "Nombre",
+            "experienceid": "Niveau d'expérience",
+            "roleid": "Role",
+            "projectid": "Project"
         }
     }
 }
