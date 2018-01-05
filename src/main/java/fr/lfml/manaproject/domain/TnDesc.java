@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -37,6 +38,7 @@ public class TnDesc implements Serializable {
 	private TechNeed tech_need;
 
 	@ManyToOne
+	@JoinColumn(name = "project_id")
 	private Project project;
 
 	// jhipster-needle-entity-add-field - JHipster will add fields here, do not

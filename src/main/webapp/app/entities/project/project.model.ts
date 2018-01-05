@@ -9,7 +9,7 @@ export class Project implements BaseEntity {
         public manday?: number,
         public referent?: string,
         public year?: number,
-        public user?: number
+        public user?: User
     ) {
     }
 }

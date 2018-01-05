@@ -43,8 +43,19 @@ management:
     context-path: /management
     health:
         mail:
-            enabled: false # When using the MailService, configure an SMTP server and set this to true
+            enabled: true # When using the MailService, configure an SMTP server and set this to true
 spring:
+    mail:
+        host: smtp-mail.outlook.com
+        port: 587
+        username: manaproject.sup@gmail.com
+        password: mana25458565
+        protocol: smtp
+        tls: true
+        properties.mail.smtp:
+            auth: true
+            starttls.enable: true
+            ssl.trust: smtp-mail.outlook.com
     application:
         name: ManaProject
     profiles:
@@ -101,7 +112,7 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: ManaProject@localhost
+        from: manaproject.sup@gmail.com
     swagger:
         default-include-pattern: /api/.*
         title: ManaProject API
