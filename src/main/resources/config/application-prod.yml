@@ -107,7 +107,7 @@ jhipster:
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: manaproject.sup@gmail.com
-        base-url: http://10.3.104.60:8080 # Modify according to your server's URL
+        base-url: http://127.0.0.1:9000 # Modify according to your server's URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         graphite:
