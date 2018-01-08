@@ -11,6 +11,34 @@ Main page styles
     background-size: contain;
 }
 
+.home-title {
+    margin-bottom: 3%;
+}
+
+.title-mana {
+    color: #4c5cda;
+}
+
+.display-4 {
+    font-weight: 500;
+}
+
+#login {
+    display: inline-block;
+    color: white;
+    background-color: #3d4450;
+    border: 3px solid #455aff;
+    border-radius: 16px;
+}
+
+#search {
+    display: inline-block;
+    color: white;
+    background-color: #3d4450;
+    border: 3px solid #455aff;
+    border-radius: 16px;
+}
+
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),

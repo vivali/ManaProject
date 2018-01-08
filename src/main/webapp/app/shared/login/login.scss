@@ -1,0 +1,18 @@
+.login-title {
+    display: block;
+    margin: auto;
+}
+
+.alert a {
+    transition: all 0.5s;
+}
+
+.alert a:hover {
+    color: #4c5cda;
+}
+
+.btn-primary:hover {
+    transition: all 0.5s;
+    background-color: #455aff;
+    border-color: #455aff;
+}

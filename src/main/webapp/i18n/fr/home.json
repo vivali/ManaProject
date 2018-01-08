@@ -1,6 +1,9 @@
 {
     "home": {
-        "title": "Bienvenue",
+        "title": "Bienvenue sur ",
+        "title-mana": "Mana",
+        "title-project": "Project !",
+        "title-search": "Recherche",
         "subtitle": "Ceci est votre page d'accueil",
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."

@@ -1,6 +1,9 @@
 {
     "home": {
-        "title": "Welcome",
+        "title": "Welcome to ",
+        "title-mana": "Mana",
+        "title-project": "Project !",
+        "title-search": "Search",
         "subtitle": " welcome ",
         "logged": {
             "message": "You are logged in as \"{{username}}\"."
