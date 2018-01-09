@@ -14,7 +14,7 @@ export const experienceRoute: Routes = [
         path: 'experience',
         component: ExperienceComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.experience.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const experienceRoute: Routes = [
         path: 'experience/:id',
         component: ExperienceDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.experience.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const experiencePopupRoute: Routes = [
         path: 'experience-new',
         component: ExperiencePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.experience.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const experiencePopupRoute: Routes = [
         path: 'experience/:id/edit',
         component: ExperiencePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.experience.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const experiencePopupRoute: Routes = [
         path: 'experience/:id/delete',
         component: ExperienceDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.experience.home.title'
         },
         canActivate: [UserRouteAccessService],

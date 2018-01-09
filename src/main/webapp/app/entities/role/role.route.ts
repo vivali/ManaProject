@@ -14,7 +14,7 @@ export const roleRoute: Routes = [
         path: 'role',
         component: RoleComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.role.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const roleRoute: Routes = [
         path: 'role/:id',
         component: RoleDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.role.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const rolePopupRoute: Routes = [
         path: 'role-new',
         component: RolePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const rolePopupRoute: Routes = [
         path: 'role/:id/edit',
         component: RolePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const rolePopupRoute: Routes = [
         path: 'role/:id/delete',
         component: RoleDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.role.home.title'
         },
         canActivate: [UserRouteAccessService],

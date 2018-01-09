@@ -40,7 +40,7 @@
         <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
     </button>
 
-    <button type="button" *jhiHasAnyAuthority="'ROLE_ADMIN'" 
+    <button type="button" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
             [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
             replaceUrl="true"
             class="btn btn-primary">

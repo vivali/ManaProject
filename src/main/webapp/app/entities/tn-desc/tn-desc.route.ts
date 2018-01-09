@@ -14,7 +14,7 @@ export const tnDescRoute: Routes = [
         path: 'tn-desc',
         component: TnDescComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.tnDesc.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const tnDescRoute: Routes = [
         path: 'tn-desc/:id',
         component: TnDescDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.tnDesc.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const tnDescPopupRoute: Routes = [
         path: 'tn-desc-new',
         component: TnDescPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.tnDesc.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const tnDescPopupRoute: Routes = [
         path: 'tn-desc/:id/edit',
         component: TnDescPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.tnDesc.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const tnDescPopupRoute: Routes = [
         path: 'tn-desc/:id/delete',
         component: TnDescDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.tnDesc.home.title'
         },
         canActivate: [UserRouteAccessService],
