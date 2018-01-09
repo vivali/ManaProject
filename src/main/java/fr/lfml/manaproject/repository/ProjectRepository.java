@@ -11,7 +11,7 @@ import fr.lfml.manaproject.domain.Project;
 /**
  * Spring Data JPA repository for the Project entity.
  */
-@SuppressWarnings("unused")
+
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
 

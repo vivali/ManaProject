@@ -30,6 +30,38 @@ Main page styles
 
 .display-4 {
     font-weight: 500;
+    display: inline;
+}
+
+.body-search {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.title-search {
+    margin: 2%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+#search-logout {
+    display: inline-block;
+    color: white;
+    background-color: #3d4450;
+    border: 3px solid #455aff;
+    border-radius: 16px;
+    padding-bottom: 2%;
+    float: right;
+}
+
+#search-log {
+    display: inline-block;
+    color: white;
+    background-color: #3d4450;
+    border: 3px solid #455aff;
+    border-radius: 16px;
+    padding-bottom: 2%;
 }
 
 #login {
@@ -40,12 +72,36 @@ Main page styles
     border-radius: 16px;
 }
 
-#search {
-    display: inline-block;
-    color: white;
-    background-color: #3d4450;
-    border: 3px solid #455aff;
-    border-radius: 16px;
+#search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#search-input .glyphicon-search{
+    font-size: 23px;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
