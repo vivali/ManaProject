@@ -8,7 +8,8 @@
     "node_modules"
   ],
   "dependencies": {
-    "@angular-devkit/schematics": "0.0.34",
+    "@angular-devkit/core": "0.0.22",
+    "@angular-devkit/schematics": "0.0.42",
     "@angular/common": "4.3.2",
     "@angular/compiler": "4.3.2",
     "@angular/core": "4.3.2",
@@ -23,13 +24,14 @@
     "font-awesome": "4.7.0",
     "handlebars": "^4.0.11",
     "jquery": "3.2.1",
+    "marked": "^0.3.12",
     "ng-jhipster": "0.2.12",
     "ng2-webstorage": "1.8.0",
     "ngx-cookie": "1.0.0",
     "ngx-infinite-scroll": "0.5.1",
     "popper.js": "^1.11.0",
     "reflect-metadata": "0.1.10",
-    "rxjs": "5.4.2",
+    "rxjs": "^5.5.2",
     "swagger-ui": "2.2.10",
     "tether": "1.4.0",
     "zone.js": "0.8.16"
