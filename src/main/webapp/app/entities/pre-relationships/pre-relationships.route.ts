@@ -14,7 +14,7 @@ export const preRelationshipsRoute: Routes = [
         path: 'pre-relationships',
         component: PreRelationshipsComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.preRelationships.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const preRelationshipsRoute: Routes = [
         path: 'pre-relationships/:id',
         component: PreRelationshipsDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.preRelationships.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const preRelationshipsPopupRoute: Routes = [
         path: 'pre-relationships-new',
         component: PreRelationshipsPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.preRelationships.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const preRelationshipsPopupRoute: Routes = [
         path: 'pre-relationships/:id/edit',
         component: PreRelationshipsPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.preRelationships.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const preRelationshipsPopupRoute: Routes = [
         path: 'pre-relationships/:id/delete',
         component: PreRelationshipsDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.preRelationships.home.title'
         },
         canActivate: [UserRouteAccessService],

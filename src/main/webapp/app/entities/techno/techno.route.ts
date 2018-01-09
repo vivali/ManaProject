@@ -22,7 +22,7 @@ export const technoRoute: Routes = [
         path: 'techno/:id',
         component: TechnoDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techno.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const technoPopupRoute: Routes = [
         path: 'techno-new',
         component: TechnoPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techno.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const technoPopupRoute: Routes = [
         path: 'techno/:id/edit',
         component: TechnoPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techno.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const technoPopupRoute: Routes = [
         path: 'techno/:id/delete',
         component: TechnoDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.techno.home.title'
         },
         canActivate: [UserRouteAccessService],

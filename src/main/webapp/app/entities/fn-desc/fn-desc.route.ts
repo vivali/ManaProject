@@ -14,7 +14,7 @@ export const fnDescRoute: Routes = [
         path: 'fn-desc',
         component: FnDescComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.fnDesc.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -22,7 +22,7 @@ export const fnDescRoute: Routes = [
         path: 'fn-desc/:id',
         component: FnDescDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.fnDesc.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const fnDescPopupRoute: Routes = [
         path: 'fn-desc-new',
         component: FnDescPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.fnDesc.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const fnDescPopupRoute: Routes = [
         path: 'fn-desc/:id/edit',
         component: FnDescPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.fnDesc.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const fnDescPopupRoute: Routes = [
         path: 'fn-desc/:id/delete',
         component: FnDescDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.fnDesc.home.title'
         },
         canActivate: [UserRouteAccessService],

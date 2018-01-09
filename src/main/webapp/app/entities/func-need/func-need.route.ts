@@ -22,7 +22,7 @@ export const funcNeedRoute: Routes = [
         path: 'func-need/:id',
         component: FuncNeedDetailComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.funcNeed.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -34,7 +34,7 @@ export const funcNeedPopupRoute: Routes = [
         path: 'func-need-new',
         component: FuncNeedPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.funcNeed.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -44,7 +44,7 @@ export const funcNeedPopupRoute: Routes = [
         path: 'func-need/:id/edit',
         component: FuncNeedPopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.funcNeed.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -54,7 +54,7 @@ export const funcNeedPopupRoute: Routes = [
         path: 'func-need/:id/delete',
         component: FuncNeedDeletePopupComponent,
         data: {
-            authorities: ['ROLE_ADMIN', 'ROLE_PMANAGER'],
+            authorities: ['ROLE_PMANAGER'],
             pageTitle: 'manaProjectApp.funcNeed.home.title'
         },
         canActivate: [UserRouteAccessService],
