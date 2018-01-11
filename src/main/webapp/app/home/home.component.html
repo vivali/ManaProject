@@ -29,6 +29,9 @@
                 </div>
             </div>
         </div>
+
+        <ng-autocomplete (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>
+
         <!-- Log -->
         <div *ngSwitchCase="true" class="col-md-12 body-search">
             <div class="col-md-8" id="search-log">

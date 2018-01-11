@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 
 import { Account, LoginModalService, Principal } from '../shared';
+
+import { CreateNewAutocompleteGroup, SelectedAutocompleteItem, NgAutocompleteComponent } from 'ng-auto-complete';
 
 @Component({
     selector: 'jhi-home',
@@ -13,6 +15,24 @@ import { Account, LoginModalService, Principal } from '../shared';
 
 })
 export class HomeComponent implements OnInit {
+
+    @ViewChild(NgAutocompleteComponent) public completer: NgAutocompleteComponent;
+
+    public group = [
+        CreateNewAutocompleteGroup(
+            'Search / choose in / from list',
+            'completer',
+            [
+                { title: 'Option 1', id: '1' },
+                { title: 'Option 2', id: '2' },
+                { title: 'Option 3', id: '3' },
+                { title: 'Option 4', id: '4' },
+                { title: 'Option 5', id: '5' },
+            ],
+            { titleKey: 'title', childrenKey: null }
+        ),
+    ];
+
     account: Account;
     modalRef: NgbModalRef;
 
@@ -21,6 +41,10 @@ export class HomeComponent implements OnInit {
         private loginModalService: LoginModalService,
         private eventManager: JhiEventManager
     ) {
+    }
+
+    Selected(item: SelectedAutocompleteItem) {
+        console.log(item);
     }
 
     ngOnInit() {

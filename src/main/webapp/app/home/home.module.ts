@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { ManaProjectSharedModule } from '../shared';
 
 import { HOME_ROUTE, HomeComponent } from './';
+import { NgAutoCompleteModule } from 'ng-auto-complete/ng-autocomplete.module';
 
 @NgModule({
     imports: [
         ManaProjectSharedModule,
+        NgAutoCompleteModule,
         RouterModule.forRoot([ HOME_ROUTE ], { useHash: false })
     ],
     declarations: [

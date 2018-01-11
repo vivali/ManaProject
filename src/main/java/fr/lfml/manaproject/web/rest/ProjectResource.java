@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.codahale.metrics.annotation.Timed;
 
 import fr.lfml.manaproject.domain.Project;
-import fr.lfml.manaproject.domain.User;
 import fr.lfml.manaproject.repository.ProjectRepository;
 import fr.lfml.manaproject.web.rest.errors.BadRequestAlertException;
 import fr.lfml.manaproject.web.rest.util.HeaderUtil;
@@ -63,9 +62,6 @@ public class ProjectResource {
 		if (project.getId() != null) {
 			throw new BadRequestAlertException("A new project cannot already have an ID", ENTITY_NAME, "idexists");
 		}
-		User user = new User();
-		user.setId(1L);
-		project.setUser(user);
 		Project result = projectRepository.save(project);
 		return ResponseEntity.created(new URI("/api/projects/" + result.getId()))
 				.headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString())).body(result);

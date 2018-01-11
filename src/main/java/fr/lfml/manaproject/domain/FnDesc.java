@@ -62,7 +62,7 @@ public class FnDesc implements Serializable {
 		this.description = description;
 	}
 
-	public Project getProject() {
+	public Project getProjectid() {
 		return project;
 	}
 
@@ -71,11 +71,11 @@ public class FnDesc implements Serializable {
 		return this;
 	}
 
-	public void setProject(Project project) {
+	public void setProjectid(Project project) {
 		this.project = project;
 	}
 
-	public FuncNeed getFunc_need() {
+	public FuncNeed getFuncneedid() {
 		return func_need;
 	}
 
@@ -84,7 +84,7 @@ public class FnDesc implements Serializable {
 		return this;
 	}
 
-	public void setFunc_need(FuncNeed funcNeed) {
+	public void setFuncneedid(FuncNeed funcNeed) {
 		this.func_need = funcNeed;
 	}
 	// jhipster-needle-entity-add-getters-setters - JHipster will add getters and

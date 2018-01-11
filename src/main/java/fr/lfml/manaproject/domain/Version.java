@@ -71,11 +71,11 @@ public class Version implements Serializable {
 		return this;
 	}
 
-	public void setProject(Project project) {
+	public void setProjectid(Project project) {
 		this.project = project;
 	}
 
-	public Techno getTechno() {
+	public Techno getTechnoid() {
 		return techno;
 	}
 
@@ -84,7 +84,7 @@ public class Version implements Serializable {
 		return this;
 	}
 
-	public void setTechno(Techno techno) {
+	public void setTechnoid(Techno techno) {
 		this.techno = techno;
 	}
 	// jhipster-needle-entity-add-getters-setters - JHipster will add getters and

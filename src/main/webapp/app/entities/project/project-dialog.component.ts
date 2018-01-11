@@ -9,7 +9,7 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { Project } from './project.model';
 import { ProjectPopupService } from './project-popup.service';
 import { ProjectService } from './project.service';
-import { User, UserService } from '../../shared';
+import { User, UserService, Principal } from '../../shared';
 import { ResponseWrapper } from '../../shared';
 
 @Component({
@@ -22,17 +22,26 @@ export class ProjectDialogComponent implements OnInit {
     isSaving: boolean;
 
     users: User[];
+    user: User = new User();
 
     constructor(
         public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
         private projectService: ProjectService,
         private userService: UserService,
-        private eventManager: JhiEventManager
+        private eventManager: JhiEventManager,
+        private principal: Principal
     ) {
     }
 
     ngOnInit() {
+        this.principal.identity().then((resp) => {
+            this.user.id = resp.id;
+            this.user.login = resp.login;
+            this.user.firstName = resp.firstName;
+            this.user.lastName = resp.lastName;
+            this.user.email = resp.email;
+        });
         this.isSaving = false;
         this.userService.query()
             .subscribe((res: ResponseWrapper) => { this.users = res.json; }, (res: ResponseWrapper) => this.onError(res.json));
@@ -48,6 +57,7 @@ export class ProjectDialogComponent implements OnInit {
             this.subscribeToSaveResponse(
                 this.projectService.update(this.project));
         } else {
+            this.project.user = this.user;
             this.subscribeToSaveResponse(
                 this.projectService.create(this.project));
         }
