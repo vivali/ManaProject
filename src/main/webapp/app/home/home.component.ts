@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
+import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 
-import { Account, LoginModalService, Principal } from '../shared';
+import { Account, LoginModalService, Principal, ResponseWrapper } from '../shared';
 
 import { CreateNewAutocompleteGroup, SelectedAutocompleteItem, NgAutocompleteComponent } from 'ng-auto-complete';
+import { ProjectComponent, Project, ProjectService } from '../entities/project/index';
 
 @Component({
     selector: 'jhi-home',
@@ -17,21 +18,41 @@ import { CreateNewAutocompleteGroup, SelectedAutocompleteItem, NgAutocompleteCom
 export class HomeComponent implements OnInit {
 
     @ViewChild(NgAutocompleteComponent) public completer: NgAutocompleteComponent;
+    projects: Project[];
+    project: Project;
+    tab = [];
+    public group;
 
-    public group = [
-        CreateNewAutocompleteGroup(
-            'Search / choose in / from list',
-            'completer',
-            [
-                { title: 'Option 1', id: '1' },
-                { title: 'Option 2', id: '2' },
-                { title: 'Option 3', id: '3' },
-                { title: 'Option 4', id: '4' },
-                { title: 'Option 5', id: '5' },
-            ],
-            { titleKey: 'title', childrenKey: null }
-        ),
-    ];
+    private onError(error) {
+        this.jhiAlertService.error(error.message, null, null);
+    }
+
+    getProjects() {
+         this.projectService.query().subscribe(
+            (res: ResponseWrapper) => {
+                this.projects = res.json;
+                this.tab = this.setTable();
+                this.group = [
+                    CreateNewAutocompleteGroup(
+                        'Search / choose in / from list',
+                        'completer',
+                        this.setTable(),
+                        { titleKey: 'title', childrenKey: null }
+                    ),
+                ];
+            },
+            (res: ResponseWrapper) => this.onError(res.json)
+         );
+    }
+
+    setTable(): any {
+        const tab = [];
+        for (let i = 0; i < this.projects.length; i++) {
+            const project: Project = this.projects[i];
+            tab.push({ title: project.title, id: project.id })
+        }
+        return tab;
+    }
 
     account: Account;
     modalRef: NgbModalRef;
@@ -39,12 +60,15 @@ export class HomeComponent implements OnInit {
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
-        private eventManager: JhiEventManager
+        private eventManager: JhiEventManager,
+        private projectService: ProjectService,
+        private jhiAlertService: JhiAlertService
     ) {
+        this.getProjects();
     }
 
     Selected(item: SelectedAutocompleteItem) {
-        console.log(item);
+        console.log(item.item.id);
     }
 
     ngOnInit() {

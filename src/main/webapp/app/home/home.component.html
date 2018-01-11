@@ -19,7 +19,8 @@
                 <h4 jhiTranslate="home.title-search" class="title-search">Search</h4>
                 <div id="search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="{{'home.search' | translate}}" />
+                            <ng-autocomplete class="ngcomplete" (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>
+                        <!--<input type="text" class="form-control input-lg" placeholder="{{'home.search' | translate}}" />-->
                         <span class="input-group-btn">
                             <button class="btn btn-info btn-lg" type="button">
                                 <i class="glyphicon glyphicon-search"></i>
@@ -30,22 +31,23 @@
             </div>
         </div>
 
-        <ng-autocomplete (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>
+         <!--<ng-autocomplete (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>-->
 
         <!-- Log -->
         <div *ngSwitchCase="true" class="col-md-12 body-search">
             <div class="col-md-8" id="search-log">
                 <h4 jhiTranslate="home.title-search" class="title-search">Search</h4>
-                <div id="search-input">
+                <!--<div id="search-input">-->
                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="{{'home.search' | translate}}" />
-                        <span class="input-group-btn">
+                       <!--<input type="text" class="form-control input-lg" placeholder="{{'home.search' | translate}}" />-->
+                        <ng-autocomplete class="ngcomplete" (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>
+                        <!--<span class="input-group-btn">
                             <button class="btn btn-info btn-lg" type="button">
                                 <i class="fa fa-search"></i>
                             </button>
-                        </span>
-                    </div>
-                </div>
+                        </span>-->
+                   <!-- </div>-->
+               </div>
             </div>
         </div>
     </div>
