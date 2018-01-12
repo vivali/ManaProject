@@ -50,7 +50,6 @@ export class TnDescDialogComponent implements OnInit {
 
     save() {
         this.isSaving = true;
-        console.log(this.tnDesc.projectid);
         if (this.tnDesc.id !== undefined) {
             this.subscribeToSaveResponse(
                 this.tnDescService.update(this.tnDesc));
