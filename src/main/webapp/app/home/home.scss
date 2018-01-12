@@ -113,6 +113,11 @@ Main page styles
     margin: auto;
 }
 
+.input-group-btn {
+    display: inline;
+    top: 29px;
+}
+
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
