@@ -3,19 +3,16 @@ import { RouterModule } from '@angular/router';
 
 import { ManaProjectSharedModule } from '../shared';
 
-import { HOME_ROUTE, HomeComponent } from './';
-import { NgAutoCompleteModule } from 'ng-auto-complete/ng-autocomplete.module';
-import { FormsModule } from '@angular/forms';
+import { PROJECT_ROUTE, CreateProjectComponent } from './';
+import { ProjectComponent } from '../entities/project';
 
 @NgModule({
     imports: [
         ManaProjectSharedModule,
-        NgAutoCompleteModule,
-        FormsModule,
-        RouterModule.forRoot([ HOME_ROUTE ], { useHash: false })
+        RouterModule.forRoot([ PROJECT_ROUTE ], { useHash: false })
     ],
     declarations: [
-        HomeComponent,
+        CreateProjectComponent,
     ],
     entryComponents: [
     ],
@@ -23,4 +20,4 @@ import { FormsModule } from '@angular/forms';
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ManaProjectHomeModule {}
+export class ManaProjectProjectModule {}

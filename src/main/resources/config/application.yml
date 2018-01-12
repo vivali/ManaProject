@@ -102,7 +102,7 @@ jhipster:
         #max-age: 1800
     mail:
         from: manaproject.sup@gmail.com
-        base-url: http://127.0.0.1:9000 # Modify according to your server's URL
+        base-url: http://89.92.160.66:9000 # Modify according to your server's URL
     swagger:
         default-include-pattern: /api/.*
         title: ManaProject API

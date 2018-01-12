@@ -3,10 +3,6 @@
 Main page styles
 ========================================================================== */
 
-.ngcomplete {
-    width: 100%;
-}
-
 .hipster {
     display: inline-block;
     width: 347px;
@@ -15,7 +11,7 @@ Main page styles
     background-size: contain;
 }
 
-.home-title {
+.project-title {
     margin-bottom: 3%;
 }
 
@@ -108,11 +104,6 @@ Main page styles
     font-size: 23px;
 }
 
-#login {
-    display: block;
-    margin: auto;
-}
-
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -129,8 +120,3 @@ only screen and (                min-resolution: 2dppx) {
 
 
 /* ---------------- auto complete -------------------*/
-
-.ng-dropdown {
-    transition: all 0.5s;
-    position: relative;
-}

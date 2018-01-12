@@ -6,6 +6,7 @@ import { Ng2Webstorage } from 'ng2-webstorage';
 
 import { ManaProjectSharedModule, UserRouteAccessService } from './shared';
 import { ManaProjectHomeModule } from './home/home.module';
+import { ManaProjectProjectModule } from './project/project.module';
 import { ManaProjectAdminModule } from './admin/admin.module';
 import { ManaProjectAccountModule } from './account/account.module';
 import { ManaProjectEntityModule } from './entities/entity.module';
@@ -33,6 +34,7 @@ import {
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
         ManaProjectSharedModule,
         ManaProjectHomeModule,
+        ManaProjectProjectModule,
         ManaProjectAdminModule,
         ManaProjectAccountModule,
         ManaProjectEntityModule,
