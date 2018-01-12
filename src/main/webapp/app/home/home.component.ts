@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
     project: Project;
     tab = [];
     public group;
+    public selected: any[] = [];
+    result;
 
     private onError(error) {
         this.jhiAlertService.error(error.message, null, null);
@@ -34,7 +36,7 @@ export class HomeComponent implements OnInit {
                 this.tab = this.setTable();
                 this.group = [
                     CreateNewAutocompleteGroup(
-                        'Search / choose in / from list',
+                        'Search...',
                         'completer',
                         this.setTable(),
                         { titleKey: 'title', childrenKey: null }
@@ -68,7 +70,7 @@ export class HomeComponent implements OnInit {
     }
 
     Selected(item: SelectedAutocompleteItem) {
-        console.log(item.item.id);
+        this.result = item.item.id;
     }
 
     ngOnInit() {
