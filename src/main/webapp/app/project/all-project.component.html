@@ -1,0 +1,151 @@
+<div>
+    <h2>
+        <span jhiTranslate="manaProjectApp.project.home.title">Projects</span>
+        <button *jhiHasAnyAuthority="'ROLE_PMANAGER'"  class="btn btn-primary float-right jh-create-entity create-project" [routerLink]="['/', { outlets: { popup: ['project-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span jhiTranslate="manaProjectApp.project.home.createLabel">
+            Create new Project
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="projects">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.title">Title</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.description">Description</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.picture">Picture</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.manday">Manday</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.referent">Referent</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.year">Year</span></th>
+            <th><span jhiTranslate="manaProjectApp.project.userid">Userid</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let project of projects ;trackBy: trackId">
+                <td><a [routerLink]="['../all-project', project.id ]">{{project.id}}</a></td>
+                <td>{{project.title}}</td>
+                <td>{{project.description}}</td>
+                <td>{{project.picture}}</td>
+                <td>{{project.manday}}</td>
+                <td>{{project.referent}}</td>
+                <td>{{project.year}}</td>
+                <td>
+                    {{project.user?.id}}
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <span>
+                            <button type="submit"
+                                    [routerLink]="['../all-project', project.id ]"
+                                    class="btn btn-info btn-sm">
+                                <span class="fa fa-eye"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+                        </span>
+                        <span *ngIf="project.user.id === currentAccount.id">
+                            <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
+                                    [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-primary btn-sm"
+                                >
+                                <span class="fa fa-pencil"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+                        </span>
+                        <span *ngIf="project.user.id === currentAccount.id">
+                            <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
+                                    [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/delete'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-danger btn-sm">
+                                <span class="fa fa-remove"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <h2>
+        <span jhiTranslate="manaProjectApp.preRelationships.home.title">Pre Relationships</span>
+        <button class="btn btn-primary float-right jh-create-entity create-pre-relationships" [routerLink]="['/', { outlets: { popup: ['pre-relationships-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="manaProjectApp.preRelationships.home.createLabel">
+            Create new Pre Relationships
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="preRelationships">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="manaProjectApp.preRelationships.number">Number</span></th>
+            <th><span jhiTranslate="manaProjectApp.preRelationships.experienceid">Experienceid</span></th>
+            <th><span jhiTranslate="manaProjectApp.preRelationships.roleid">Roleid</span></th>
+            <th><span jhiTranslate="manaProjectApp.preRelationships.projectid">Projectid</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let preRelationships of preRelationships ;trackBy: trackId">
+                <td><a [routerLink]="['../pre-relationships', preRelationships.id ]">{{preRelationships.id}}</a></td>
+                <td>{{preRelationships.number}}</td>
+                <td>
+                    <div *ngIf="preRelationships.experienceid">
+                        <a [routerLink]="['../experience', preRelationships.experienceid?.id ]" >{{preRelationships.experienceid?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="preRelationships.roleid">
+                        <a [routerLink]="['../role', preRelationships.roleid?.id ]" >{{preRelationships.roleid?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="preRelationships.projectid">
+                        <a [routerLink]="['../all-project', preRelationships.projectid?.id ]" >{{preRelationships.projectid?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../pre-relationships', preRelationships.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'pre-relationships/'+ preRelationships.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'pre-relationships/'+ preRelationships.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

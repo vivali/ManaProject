@@ -24,44 +24,44 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let version of versions ;trackBy: trackId">
-                <td><a [routerLink]="['../version', version.id ]">{{version.id}}</a></td>
-                <td>{{version.number}}</td>
-                <td>
-                    <div *ngIf="version.projectid">
-                        <a [routerLink]="['../project', version.projectid?.id ]" >{{version.projectid?.id}}</a>
-                    </div>
-                </td>
-                <td>
-                    <div *ngIf="version.technoid">
-                        <a [routerLink]="['../techno', version.technoid?.id ]" >{{version.technoid?.id}}</a>
-                    </div>
-                </td>
-                <td class="text-right">
-                    <div class="btn-group flex-btn-group-container">
-                        <button type="submit"
-                                [routerLink]="['../version', version.id ]"
-                                class="btn btn-info btn-sm">
-                            <span class="fa fa-eye"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
-                        </button>
-                        <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/edit'} }]"
-                                replaceUrl="true"
-                                class="btn btn-primary btn-sm">
-                            <span class="fa fa-pencil"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
-                        </button>
-                        <button type="submit"
-                                [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/delete'} }]"
-                                replaceUrl="true"
-                                class="btn btn-danger btn-sm">
-                            <span class="fa fa-remove"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
-                        </button>
-                    </div>
-                </td>
-            </tr>
+                <tr *ngFor="let version of versions ;trackBy: trackId">
+                    <td><a [routerLink]="['../version', version.id ]">{{version.id}}</a></td>
+                    <td>{{version.number}}</td>
+                    <td>
+                        <div *ngIf="version.projectid">
+                            <a [routerLink]="['../project', version.projectid?.id ]" >{{version.projectid?.id}}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="version.technoid">
+                            <a [routerLink]="['../techno', version.technoid?.id ]" >{{version.technoid?.id}}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    [routerLink]="['../version', version.id ]"
+                                    class="btn btn-info btn-sm">
+                                <span class="fa fa-eye"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+                            <button type="submit"
+                                    [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/edit'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-primary btn-sm">
+                                <span class="fa fa-pencil"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+                            <button type="submit"
+                                    [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/delete'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-danger btn-sm">
+                                <span class="fa fa-remove"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

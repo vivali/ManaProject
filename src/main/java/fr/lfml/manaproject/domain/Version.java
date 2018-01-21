@@ -62,7 +62,7 @@ public class Version implements Serializable {
 		this.number = number;
 	}
 
-	public Project getProject() {
+	public Project getProjectid() {
 		return project;
 	}
 

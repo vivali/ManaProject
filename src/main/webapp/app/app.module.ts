@@ -6,10 +6,10 @@ import { Ng2Webstorage } from 'ng2-webstorage';
 
 import { ManaProjectSharedModule, UserRouteAccessService } from './shared';
 import { ManaProjectHomeModule } from './home/home.module';
-import { ManaProjectProjectModule } from './project/project.module';
 import { ManaProjectAdminModule } from './admin/admin.module';
 import { ManaProjectAccountModule } from './account/account.module';
 import { ManaProjectEntityModule } from './entities/entity.module';
+import { ManaProjectAllProjectModule } from './project/all-project.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -34,10 +34,10 @@ import {
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
         ManaProjectSharedModule,
         ManaProjectHomeModule,
-        ManaProjectProjectModule,
         ManaProjectAdminModule,
         ManaProjectAccountModule,
         ManaProjectEntityModule,
+        ManaProjectAllProjectModule,
         NgAutoCompleteModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],

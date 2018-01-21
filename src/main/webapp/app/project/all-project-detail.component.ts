@@ -3,16 +3,24 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { JhiEventManager } from 'ng-jhipster';
 
-import { Project } from './project.model';
-import { ProjectService } from './project.service';
+import { Project, ProjectService } from '../entities/project';
+import { TechNeed, TechNeedService } from '../entities/tech-need';
+import { TnDesc, TnDescService } from '../entities/tn-desc';
+import { FuncNeed, FuncNeedService } from '../entities/func-need';
+import { FnDesc, FnDescService } from '../entities/fn-desc';
+import { Techno, technoRoute } from '../entities/techno';
+import { Version, VersionService } from '../entities/version';
+import { Role, RoleService } from '../entities/role';
+import { Experience, ExperienceService } from '../entities/experience';
+import { PreRelationships, PreRelationshipsService } from '../entities/pre-relationships';
 
-import { Principal } from '../../shared';
+import { Principal } from '../shared';
 
 @Component({
-    selector: 'jhi-project-detail',
-    templateUrl: './project-detail.component.html'
+    selector: 'jhi-all-project-detail',
+    templateUrl: './all-project-detail.component.html'
 })
-export class ProjectDetailComponent implements OnInit, OnDestroy {
+export class AllProjectDetailComponent implements OnInit, OnDestroy {
 
     project: Project;
     private subscription: Subscription;

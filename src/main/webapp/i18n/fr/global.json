@@ -5,8 +5,9 @@
         "menu": {
             "home": "Accueil",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "allproject": "Tout",
             "entities": {
-                "main": "Menu",
+                "main": "Administration des Projets",
                 "experience": "Niveau d'expérience",
                 "funcNeed": "Besoins fonctionnels",
                 "role": "Roles",
@@ -29,7 +30,7 @@
                 "register": "Créer un compte"
             },
             "admin": {
-                "main": "Administration",
+                "main": "Administration Utilisateur/Serveur",
                 "userManagement": "Gestion des utilisateurs",
                 "tracker": "Suivi des utilisateurs",
                 "metrics": "Métriques",

@@ -41,26 +41,33 @@
                 </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
-                        <button type="submit"
-                                [routerLink]="['../project', project.id ]"
-                                class="btn btn-info btn-sm">
-                            <span class="fa fa-eye"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
-                        </button>
-                        <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
-                                [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
-                                replaceUrl="true"
-                                class="btn btn-primary btn-sm">
-                            <span class="fa fa-pencil"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
-                        </button>
-                        <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
-                                [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/delete'} }]"
-                                replaceUrl="true"
-                                class="btn btn-danger btn-sm">
-                            <span class="fa fa-remove"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
-                        </button>
+                        <span>
+                            <button type="submit"
+                                    [routerLink]="['../project', project.id ]"
+                                    class="btn btn-info btn-sm">
+                                <span class="fa fa-eye"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+                        </span>
+                        <span *ngIf="project.user.id === currentAccount.id">
+                            <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
+                                    [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-primary btn-sm"
+                                >
+                                <span class="fa fa-pencil"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+                        </span>
+                        <span *ngIf="project.user.id === currentAccount.id">
+                            <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
+                                    [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/delete'} }]"
+                                    replaceUrl="true"
+                                    class="btn btn-danger btn-sm">
+                                <span class="fa fa-remove"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </span>
                     </div>
                 </td>
             </tr>

@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
     public group;
     public selected: any[] = [];
     result;
+    account: Account;
+    modalRef: NgbModalRef;
 
     private onError(error) {
         this.jhiAlertService.error(error.message, null, null);
@@ -55,9 +57,6 @@ export class HomeComponent implements OnInit {
         }
         return tab;
     }
-
-    account: Account;
-    modalRef: NgbModalRef;
 
     constructor(
         private principal: Principal,
