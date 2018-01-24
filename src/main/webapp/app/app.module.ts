@@ -14,7 +14,6 @@ import { ManaProjectAllProjectModule } from './project/all-project.module';
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 import { NgAutoCompleteModule } from 'ng-auto-complete';
-// jhipster-needle-angular-add-module-import JHipster will add new module here
 
 import {
     JhiMainComponent,
@@ -26,6 +25,7 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -38,8 +38,8 @@ import {
         ManaProjectAccountModule,
         ManaProjectEntityModule,
         ManaProjectAllProjectModule,
-        NgAutoCompleteModule
-        // jhipster-needle-angular-add-module JHipster will add new module here
+        NgAutoCompleteModule,
+        FormsModule
     ],
     declarations: [
         JhiMainComponent,

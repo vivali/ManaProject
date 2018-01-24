@@ -28,9 +28,9 @@
         <dd>
             <span>{{project.year}}</span>
         </dd>
-        <dt><span jhiTranslate="manaProjectApp.project.userid">Userid</span></dt>
+        <dt><span jhiTranslate="manaProjectApp.project.userid">User</span></dt>
         <dd>
-            <span>{{project.user?.id}}</span>
+            <span>{{project.user?.email}}</span>
         </dd>
     </dl>
  
@@ -39,7 +39,7 @@
             class="btn btn-info">
         <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
     </button>
-    <span *ngIf="project.user.id === currentAccount.id">
+    <span *ngIf="(currentAccount.lastName === 'System') || (currentAccount.lastName === 'Administrator') || (project.user.id === currentAccount.id)">
         <button type="button" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
                 [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
                 replaceUrl="true"

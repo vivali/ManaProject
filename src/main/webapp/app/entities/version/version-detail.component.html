@@ -11,13 +11,13 @@
         <dt><span jhiTranslate="manaProjectApp.version.projectid">Projectid</span></dt>
         <dd>
             <div *ngIf="version.projectid">
-                <a [routerLink]="['/project', version.projectid?.id]">{{version.projectid?.id}}</a>
+                <a [routerLink]="['/project', version.projectid?.id]">{{version.projectid?.title}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="manaProjectApp.version.technoid">Technoid</span></dt>
         <dd>
             <div *ngIf="version.technoid">
-                <a [routerLink]="['/techno', version.technoid?.id]">{{version.technoid?.id}}</a>
+                <a [routerLink]="['/techno', version.technoid?.id]">{{version.technoid?.title}}</a>
             </div>
         </dd>
     </dl>

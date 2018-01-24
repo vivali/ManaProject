@@ -10,6 +10,7 @@ import { ResponseWrapper, createRequestOption } from '../../shared';
 export class ProjectService {
 
     private resourceUrl = SERVER_API_URL + 'api/projects';
+    private resourceUrlSearch = SERVER_API_URL + 'api/proforsearch';
 
     constructor(private http: Http) { }
 
@@ -39,6 +40,12 @@ export class ProjectService {
     query(req?: any): Observable<ResponseWrapper> {
         const options = createRequestOption(req);
         return this.http.get(this.resourceUrl, options)
+            .map((res: Response) => this.convertResponse(res));
+    }
+
+    queryForSearch(req?: any): Observable<ResponseWrapper> {
+        const options = createRequestOption(req);
+        return this.http.get(this.resourceUrlSearch, options)
             .map((res: Response) => this.convertResponse(res));
     }
 

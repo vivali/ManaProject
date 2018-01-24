@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     }
 
     getProjects() {
-         this.projectService.query().subscribe(
+         this.projectService.queryForSearch().subscribe(
             (res: ResponseWrapper) => {
                 this.projects = res.json;
                 this.tab = this.setTable();
@@ -89,9 +89,5 @@ export class HomeComponent implements OnInit {
 
     isAuthenticated() {
         return this.principal.isAuthenticated();
-    }
-
-    login() {
-        this.modalRef = this.loginModalService.open();
     }
 }

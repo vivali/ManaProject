@@ -29,12 +29,12 @@
                     <td>{{version.number}}</td>
                     <td>
                         <div *ngIf="version.projectid">
-                            <a [routerLink]="['../project', version.projectid?.id ]" >{{version.projectid?.id}}</a>
+                            <a [routerLink]="['../project', version.projectid?.id ]" >{{version.projectid?.title}}</a>
                         </div>
                     </td>
                     <td>
                         <div *ngIf="version.technoid">
-                            <a [routerLink]="['../techno', version.technoid?.id ]" >{{version.technoid?.id}}</a>
+                            <a [routerLink]="['../techno', version.technoid?.id ]" >{{version.technoid?.title}}</a>
                         </div>
                     </td>
                     <td class="text-right">

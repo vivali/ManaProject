@@ -1,7 +1,7 @@
 <div>
     <h2>
         <span jhiTranslate="manaProjectApp.project.home.title">Projects</span>
-        <button *jhiHasAnyAuthority="'ROLE_PMANAGER'"  class="btn btn-primary float-right jh-create-entity create-project" [routerLink]="['/', { outlets: { popup: ['project-new'] } }]">
+        <button *jhiHasAnyAuthority="'ROLE_PMANAGER'"  class="btn btn-primary float-right jh-create-entity create-project" [routerLink]="['/', { outlets: { popup: ['all-project-new'] } }]">
             <span class="fa fa-plus"></span>
             <span jhiTranslate="manaProjectApp.project.home.createLabel">
             Create new Project

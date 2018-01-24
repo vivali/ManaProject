@@ -29,12 +29,12 @@
                 <td>{{fnDesc.description}}</td>
                 <td>
                     <div *ngIf="fnDesc.projectid">
-                        <a [routerLink]="['../project', fnDesc.projectid?.id ]" >{{fnDesc.projectid?.id}}</a>
+                        <a [routerLink]="['../project', fnDesc.projectid?.id ]" >{{fnDesc.projectid?.title}}</a>
                     </div>
                 </td>
                 <td>
                     <div *ngIf="fnDesc.funcneedid">
-                        <a [routerLink]="['../func-need', fnDesc.funcneedid?.id ]" >{{fnDesc.funcneedid?.id}}</a>
+                        <a [routerLink]="['../func-need', fnDesc.funcneedid?.id ]" >{{fnDesc.funcneedid?.title}}</a>
                     </div>
                 </td>
                 <td class="text-right">

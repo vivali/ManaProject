@@ -30,17 +30,17 @@
                 <td>{{preRelationships.number}}</td>
                 <td>
                     <div *ngIf="preRelationships.experienceid">
-                        <a [routerLink]="['../experience', preRelationships.experienceid?.id ]" >{{preRelationships.experienceid?.id}}</a>
+                        <a [routerLink]="['../experience', preRelationships.experienceid?.id ]" >{{preRelationships.experienceid?.title}}</a>
                     </div>
                 </td>
                 <td>
                     <div *ngIf="preRelationships.roleid">
-                        <a [routerLink]="['../role', preRelationships.roleid?.id ]" >{{preRelationships.roleid?.id}}</a>
+                        <a [routerLink]="['../role', preRelationships.roleid?.id ]" >{{preRelationships.roleid?.title}}</a>
                     </div>
                 </td>
                 <td>
                     <div *ngIf="preRelationships.projectid">
-                        <a [routerLink]="['../project', preRelationships.projectid?.id ]" >{{preRelationships.projectid?.id}}</a>
+                        <a [routerLink]="['../project', preRelationships.projectid?.id ]" >{{preRelationships.projectid?.title}}</a>
                     </div>
                 </td>
                 <td class="text-right">

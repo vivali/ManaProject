@@ -34,22 +34,32 @@ export class AllProjectPopupService {
 
             if (id) {
                 this.projectService.find(id).subscribe((project) => {
-                    this.ngbModalRef = this.projectModalRef(component, project);
+                    this.ngbModalRef = this.allProjectModalRef(component, project);
                     resolve(this.ngbModalRef);
                 });
             } else {
-                // setTimeout used as a workaround for getting ExpressionChangedAfterItHasBeenCheckedError
                 setTimeout(() => {
-                    this.ngbModalRef = this.projectModalRef(component, new Project());
+                    this.ngbModalRef = this.allProjectModalRef(component, new Project(), new FuncNeed(), new FnDesc(), new TechNeed(), new TnDesc(), new Techno(),
+                    new Version(), new Role(), new Experience(), new PreRelationships());
                     resolve(this.ngbModalRef);
                 }, 0);
             }
         });
     }
 
-    projectModalRef(component: Component, project: Project): NgbModalRef {
+    allProjectModalRef(component: Component, project?: Project, funcNeed?: FuncNeed, fnDesc?: FnDesc, techNeed?: TechNeed, tnDesc?: TnDesc, techno?: Techno,
+        version?: Version, role?: Role, experience?: Experience, preRelationships?: PreRelationships): NgbModalRef {
         const modalRef = this.modalService.open(component, { size: 'lg', backdrop: 'static'});
         modalRef.componentInstance.project = project;
+        modalRef.componentInstance.funcNeed = funcNeed;
+        modalRef.componentInstance.fnDesc = fnDesc;
+        modalRef.componentInstance.techNeed = techNeed;
+        modalRef.componentInstance.tnDesc = tnDesc;
+        modalRef.componentInstance.techno = techno;
+        modalRef.componentInstance.version = version;
+        modalRef.componentInstance.role = role;
+        modalRef.componentInstance.experience = experience;
+        modalRef.componentInstance.preRelationships = preRelationships;
         modalRef.result.then((result) => {
             this.router.navigate([{ outlets: { popup: null }}], { replaceUrl: true });
             this.ngbModalRef = null;

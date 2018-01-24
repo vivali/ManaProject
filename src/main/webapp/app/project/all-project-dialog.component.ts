@@ -6,16 +6,18 @@ import { Observable } from 'rxjs/Rx';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 
-import { Project, ProjectService } from '../entities/project';
-import { TechNeed, TechNeedService } from '../entities/tech-need';
-import { TnDesc, TnDescService } from '../entities/tn-desc';
-import { FuncNeed, FuncNeedService } from '../entities/func-need';
-import { FnDesc, FnDescService } from '../entities/fn-desc';
-import { Techno, technoRoute } from '../entities/techno';
-import { Version, VersionService } from '../entities/version';
-import { Role, RoleService } from '../entities/role';
-import { Experience, ExperienceService } from '../entities/experience';
-import { PreRelationships, PreRelationshipsService } from '../entities/pre-relationships';
+import { Project } from '../entities/project';
+import { TechNeed } from '../entities/tech-need';
+import { TnDesc } from '../entities/tn-desc';
+import { FuncNeed } from '../entities/func-need';
+import { FnDesc } from '../entities/fn-desc';
+import { Techno } from '../entities/techno';
+import { Version } from '../entities/version';
+import { Role } from '../entities/role';
+import { Experience } from '../entities/experience';
+import { PreRelationships } from '../entities/pre-relationships';
+
+import { AllProjectService } from './all-project.service';
 
 import { AllProjectPopupService } from './all-project-popup.service';
 import { User, UserService, Principal } from '../shared';
@@ -26,9 +28,30 @@ import { ResponseWrapper } from '../shared';
     templateUrl: './all-project-dialog.component.html'
 })
 export class AllProjectDialogComponent implements OnInit {
+    projects: Project[];
+    techNeeds: TechNeed[];
+    tnDescs: TnDesc[];
+    funcNeeds: FuncNeed[];
+    fnDescs: FnDesc[];
+    technos: Techno[];
+    versions: Version[];
+    roles: Role[];
+    experiences: Experience[];
+    preRelationships: PreRelationships[];
 
     project: Project;
+    techNeed: TechNeed;
+    tnDesc: TnDesc;
+    funcNeed: FuncNeed;
+    fnDesc: FnDesc;
+    techno: Techno;
+    version: Version;
+    role: Role;
+    experience: Experience;
+    preRelationship: PreRelationships;
+
     isSaving: boolean;
+    currentPage = 0;
 
     users: User[];
     user: User = new User();
@@ -36,7 +59,7 @@ export class AllProjectDialogComponent implements OnInit {
     constructor(
         public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
-        private projectService: ProjectService,
+        private allProjectService: AllProjectService,
         private userService: UserService,
         private eventManager: JhiEventManager,
         private principal: Principal
@@ -60,28 +83,34 @@ export class AllProjectDialogComponent implements OnInit {
         this.activeModal.dismiss('cancel');
     }
 
+    next() {
+        ++this.currentPage;
+    }
+
+    previous() {
+        --this.currentPage;
+    }
+
     save() {
         this.isSaving = true;
         if (this.project.id !== undefined) {
-            this.subscribeToSaveResponse(
-                this.projectService.update(this.project));
+            this.allProjectService.update(this.project);
         } else {
             this.project.user = this.user;
-            this.subscribeToSaveResponse(
-                this.projectService.create(this.project));
+            this.allProjectService.create(this.project);
         }
     }
 
-    private subscribeToSaveResponse(result: Observable<Project>) {
-        result.subscribe((res: Project) =>
-            this.onSaveSuccess(res), (res: Response) => this.onSaveError());
-    }
+    // private subscribeToSaveResponse(result: Observable<Project>) {
+    //     result.subscribe((res: Project) =>
+    //         this.onSaveSuccess(res), (res: Response) => this.onSaveError());
+    // }
 
-    private onSaveSuccess(result: Project) {
-        this.eventManager.broadcast({ name: 'projectListModification', content: 'OK'});
-        this.isSaving = false;
-        this.activeModal.dismiss(result);
-    }
+    // private onSaveSuccess(result: Project) {
+    //     this.eventManager.broadcast({ name: 'projectListModification', content: 'OK'});
+    //     this.isSaving = false;
+    //     this.activeModal.dismiss(result);
+    // }
 
     private onSaveError() {
         this.isSaving = false;
@@ -106,16 +135,16 @@ export class AllProjectPopupComponent implements OnInit, OnDestroy {
 
     constructor(
         private route: ActivatedRoute,
-        private projectPopupService: AllProjectPopupService
+        private allProjectPopupService: AllProjectPopupService
     ) {}
 
     ngOnInit() {
         this.routeSub = this.route.params.subscribe((params) => {
             if ( params['id'] ) {
-                this.projectPopupService
+                this.allProjectPopupService
                     .open(AllProjectDialogComponent as Component, params['id']);
             } else {
-                this.projectPopupService
+                this.allProjectPopupService
                     .open(AllProjectDialogComponent as Component);
             }
         });

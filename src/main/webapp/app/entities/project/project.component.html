@@ -37,7 +37,7 @@
                 <td>{{project.referent}}</td>
                 <td>{{project.year}}</td>
                 <td>
-                    {{project.user?.id}}
+                    {{project.user?.lastName}} {{project.user?.firstName}}
                 </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
@@ -49,7 +49,7 @@
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
                             </button>
                         </span>
-                        <span *ngIf="project.user.id === currentAccount.id">
+                        <span *ngIf="(currentAccount.lastName === 'System') || (currentAccount.lastName === 'Administrator') || (project.user.id === currentAccount.id)">
                             <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
                                     [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
                                     replaceUrl="true"
@@ -59,7 +59,7 @@
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
                             </button>
                         </span>
-                        <span *ngIf="project.user.id === currentAccount.id">
+                        <span *ngIf="(currentAccount.lastName === 'System') || (currentAccount.lastName === 'Administrator') || (project.user.id === currentAccount.id)">
                             <button type="submit" *jhiHasAnyAuthority="'ROLE_PMANAGER'" 
                                     [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/delete'} }]"
                                     replaceUrl="true"

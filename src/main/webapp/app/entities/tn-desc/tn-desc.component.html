@@ -29,12 +29,12 @@
                 <td>{{tnDesc.description}}</td>
                 <td>
                     <div *ngIf="tnDesc.techneedid">
-                        <a [routerLink]="['../tech-need', tnDesc.techneedid?.id ]" >{{tnDesc.techneedid?.id}}</a>
+                        <a [routerLink]="['../tech-need', tnDesc.techneedid?.id ]" >{{tnDesc.techneedid?.title}}</a>
                     </div>
                 </td>
                 <td>
                     <div *ngIf="tnDesc.projectid">
-                        <a [routerLink]="['../project', tnDesc.projectid?.id ]" >{{tnDesc.projectid?.id}}</a>
+                        <a [routerLink]="['../project', tnDesc.projectid?.id ]" >{{tnDesc.projectid?.title}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -46,7 +46,7 @@
             <label class="form-control-label" jhiTranslate="manaProjectApp.preRelationships.projectid" for="field_projectid">Projectid</label>
             <select class="form-control" id="field_projectid" name="projectid" [(ngModel)]="preRelationships.projectid" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="projectOption.id === preRelationships.projectid?.id ? preRelationships.projectid : projectOption" *ngFor="let projectOption of projects; trackBy: trackProjectById">{{projectOption.id}}</option>
+                <option [ngValue]="projectOption.id === preRelationships.projectid?.id ? preRelationships.projectid : projectOption" *ngFor="let projectOption of projects; trackBy: trackProjectById">{{projectOption.title}}</option>
             </select>
         </div>
     </div>

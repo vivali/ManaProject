@@ -11,13 +11,13 @@
         <dt><span jhiTranslate="manaProjectApp.tnDesc.techneedid">Techneedid</span></dt>
         <dd>
             <div *ngIf="tnDesc.techneedid">
-                <a [routerLink]="['/tech-need', tnDesc.techneedid?.id]">{{tnDesc.techneedid?.id}}</a>
+                <a [routerLink]="['/tech-need', tnDesc.techneedid?.id]">{{tnDesc.techneedid?.title}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="manaProjectApp.tnDesc.projectid">Projectid</span></dt>
         <dd>
             <div *ngIf="tnDesc.projectid">
-                <a [routerLink]="['/project', tnDesc.projectid?.id]">{{tnDesc.projectid?.id}}</a>
+                <a [routerLink]="['/project', tnDesc.projectid?.id]">{{tnDesc.projectid?.title}}</a>
             </div>
         </dd>
     </dl>

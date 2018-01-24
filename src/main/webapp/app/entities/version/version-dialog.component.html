@@ -28,14 +28,14 @@
             <label class="form-control-label" jhiTranslate="manaProjectApp.version.projectid" for="field_projectid">Projectid</label>
             <select class="form-control" id="field_projectid" name="projectid" [(ngModel)]="version.projectid" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="projectOption.id === version.projectid?.id ? version.projectid : projectOption" *ngFor="let projectOption of projects; trackBy: trackProjectById">{{projectOption.id}}</option>
+                <option [ngValue]="projectOption.id === version.projectid?.id ? version.projectid : projectOption" *ngFor="let projectOption of projects; trackBy: trackProjectById">{{projectOption.title}}</option>
             </select>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="manaProjectApp.version.technoid" for="field_technoid">Technoid</label>
             <select class="form-control" id="field_technoid" name="technoid" [(ngModel)]="version.technoid" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="technoOption.id === version.technoid?.id ? version.technoid : technoOption" *ngFor="let technoOption of technos; trackBy: trackTechnoById">{{technoOption.id}}</option>
+                <option [ngValue]="technoOption.id === version.technoid?.id ? version.technoid : technoOption" *ngFor="let technoOption of technos; trackBy: trackTechnoById">{{technoOption.title}}</option>
             </select>
         </div>
     </div>

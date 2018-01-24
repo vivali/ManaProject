@@ -14,6 +14,7 @@ import {
     AllProjectPopupComponent,
     AllProjectPopupService
 } from './';
+import { FormsModule } from '@angular/forms';
 
 const ENTITY_STATES = [
     ...allProjectRoute,
@@ -24,7 +25,8 @@ const ENTITY_STATES = [
     imports: [
         ManaProjectSharedModule,
         ManaProjectAdminModule,
-        RouterModule.forRoot(ENTITY_STATES, { useHash: true })
+        RouterModule.forRoot(ENTITY_STATES, { useHash: true }),
+        FormsModule
     ],
     declarations: [
         AllProjectComponent,

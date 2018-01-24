@@ -104,6 +104,13 @@ public class ProjectResource {
 		return projectRepository.findAll();
 	}
 
+	@GetMapping("/proforsearch")
+	@Timed
+	public List<Project> getAllProjectsForSearch() {
+		log.debug("REST request to get all Projects");
+		return projectRepository.findAll();
+	}
+	
 	/**
 	 * GET /projects/:id : get the "id" project.
 	 *

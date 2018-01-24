@@ -1,12 +1,6 @@
 <div class="row">
     <div class="col-md-12 text-center home-title">
         <h1 class="display-4" jhiTranslate="home.title"></h1><span class="title-mana" jhiTranslate="home.title-mana"></span><span class="title-project" jhiTranslate="home.title-project"></span>
-        <!-- <div [ngSwitch]="isAuthenticated()"> 
-            <div class="alert alert-success col-md-3" *ngSwitchCase="true">
-                <span *ngIf="account" jhiTranslate="home.logged.message"
-                    translateValues="{username: '{{account.login}}'}"> You are logged in as user "{{account.login}}". </span>
-            </div>
-        </div>-->
     </div>
     <!-- Switch -->
     <div [ngSwitch]="isAuthenticated()" class="col-md-12">
@@ -15,23 +9,7 @@
             <div class="col-md-5" id="login">
                 <jhi-login-modal></jhi-login-modal>
             </div>
-            <!-- <div class="col-md-5" id="search-logout">
-                <h4 jhiTranslate="home.title-search" class="title-search">Search</h4>
-                <div id="search-input">
-                    <div class="input-group col-md-12">
-                            <ng-autocomplete class="ngcomplete" (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>
-                        <input type="text" class="form-control input-lg" placeholder="{{'home.search' | translate}}" />
-                        <span class="input-group-btn">
-                            <button class="btn btn-info btn-lg" type="button">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div> -->
         </div>
-
-         <!--<ng-autocomplete (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>-->
 
         <!-- Log -->
         <div *ngSwitchCase="true" class="col-md-12 body-search">
@@ -42,7 +20,7 @@
                        <!--<input type="text" class="form-control input-lg" placeholder="{{'home.search' | translate}}" />-->
                         <ng-autocomplete class="ngcomplete" (selected)="Selected($event)" [classes]="['']" [group]="group"></ng-autocomplete>
                         <span class="input-group-btn">
-                            <button class="btn btn-lg" type="button">
+                            <button class="btn btn-lg"  id="btn-search" type="button">
                                 <a routerLink='/project/{{result}}'><i class="fa fa-search"></i></a>
                             </button>
                         </span>

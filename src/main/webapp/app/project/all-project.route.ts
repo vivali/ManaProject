@@ -11,7 +11,7 @@ import { AllProjectDeletePopupComponent } from './all-project-delete-dialog.comp
 
 export const allProjectRoute: Routes = [
     {
-        path: 'allproject',
+        path: 'all-project',
         component: AllProjectComponent,
         data: {
             authorities: ['ROLE_USER'],
@@ -19,7 +19,7 @@ export const allProjectRoute: Routes = [
         },
         canActivate: [UserRouteAccessService]
     }, {
-        path: 'aproject/:id',
+        path: 'all-project/:id',
         component: AllProjectDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
@@ -31,7 +31,7 @@ export const allProjectRoute: Routes = [
 
 export const allProjectPopupRoute: Routes = [
     {
-        path: 'aproject-new',
+        path: 'all-project-new',
         component: AllProjectPopupComponent,
         data: {
             authorities: ['ROLE_PMANAGER'],
@@ -41,7 +41,7 @@ export const allProjectPopupRoute: Routes = [
         outlet: 'popup'
     },
     {
-        path: 'aproject/:id/edit',
+        path: 'all-project/:id/edit',
         component: AllProjectPopupComponent,
         data: {
             authorities: ['ROLE_PMANAGER'],
@@ -51,7 +51,7 @@ export const allProjectPopupRoute: Routes = [
         outlet: 'popup'
     },
     {
-        path: 'aproject/:id/delete',
+        path: 'all-project/:id/delete',
         component: AllProjectDeletePopupComponent,
         data: {
             authorities: ['ROLE_PMANAGER'],
