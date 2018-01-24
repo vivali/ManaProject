@@ -1,10 +1,10 @@
 
-  ${AnsiColor.GREEN}      ██╗${AnsiColor.RED} ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
-  ${AnsiColor.GREEN}██╗   ██║${AnsiColor.RED} ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
-  ${AnsiColor.GREEN}╚██████╔╝${AnsiColor.RED} ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
-  ${AnsiColor.GREEN} ╚═════╝ ${AnsiColor.RED} ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+  ${AnsiColor.BLUE}████╗████╗    ████╗   ████╗  ██╗   ████╗   ${AnsiColor.WHITE} ███████╗  ███████╗  ██████╗ ████████╗ ████████╗ ███████╗ ████████╗  
+  ${AnsiColor.BLUE}████║████║    ████║   ████║  ██║   ████║   ${AnsiColor.WHITE} ██╔═══██╗ ██╔═══██╗ ██║ ██║ ╚══██╔══╝ ██╔═════╝ ██╔════╝ ╚══██╔══╝  
+  ${AnsiColor.BLUE}██║███║██║   ██║ ██╗  ██║██╗ ██║  ██║ ██╗  ${AnsiColor.WHITE} ███████╔╝ ███████╔╝ ██║ ██║    ██║    ██████╗   ██║         ██║      
+  ${AnsiColor.BLUE}██║╚══╝██║   ██████║  ██║ ██╗██║  ██████║  ${AnsiColor.WHITE} ██╔════╝  ██╔═══██╗ ██║ ██║    ██║    ██╔═══╝   ██║         ██║     
+  ${AnsiColor.BLUE}██║    ██║  ██║   ██╗ ██║  ████║ ██║   ██╗ ${AnsiColor.WHITE} ██║       ██║   ██║ ██████║ █████║    ████████╗ ███████╗    ██║   
+  ${AnsiColor.BLUE}╚═╝    ╚═╝  ╚═╝   ╚═╝ ╚═╝   ╚══╝ ╚═╝   ╚═╝ ${AnsiColor.WHITE} ╚═╝       ╚═╝   ╚═╝ ╚═════╝ ╚════╝    ╚═══════╝ ╚══════╝    ╚═╝    
 
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: http://www.jhipster.tech ::${AnsiColor.DEFAULT}
+
+${AnsiColor.BRIGHT_BLUE}:: MANAPROJECT is starting ::${AnsiColor.DEFAULT}
