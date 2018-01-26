@@ -23,8 +23,16 @@ Navbar
         width: 40px;
         border-radius: 50%;
     }
+    .dropdown-item {
+        border-left: 6px transparent solid;
+    }
+    .dropdown-item:hover {
+        transition: border 0.5s;
+        border-left: 6px #003ba7 solid;
+    }
     .dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
         background-color: #003ba7;
+        border-left: 6px #003ba7 solid;
     }
     .dropdown-toggle::after {
         margin-left: 0.15em;

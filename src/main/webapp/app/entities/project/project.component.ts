@@ -6,6 +6,10 @@ import { JhiEventManager, JhiParseLinks, JhiAlertService } from 'ng-jhipster';
 import { Project } from './project.model';
 import { ProjectService } from './project.service';
 import { ITEMS_PER_PAGE, Principal, ResponseWrapper } from '../../shared';
+import { jQuery } from 'jquery';
+import { DataTable } from 'datatables.net';
+
+declare var $: jQuery;
 
 @Component({
     selector: 'jhi-project',

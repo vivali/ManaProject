@@ -17,6 +17,7 @@
             },
             "title": "Title",
             "description": "Description",
+            "no-picture": "No picture used",
             "picture": "Picture",
             "manday": "Man day",
             "referent": "Referent",

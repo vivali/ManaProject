@@ -80,6 +80,75 @@ Generic styles
     border-top: 1px solid rgba(0,0,0,.125);
 }
 
+.btn-create {
+    background-color: rgb(10, 207, 10);
+    color: #fff;
+    text-decoration: bold;
+}
+
+.jh-entity-details dt {
+    color: #0099cc;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    border-left: 4px rgb(78, 78, 231) solid;
+    padding-left: 0.3%;
+}
+
+.jh-entity-details div dt {
+    color: #0099cc;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    border-left: 4px rgb(78, 78, 231) solid;
+    padding-left: 3.5%;
+}
+
+.ddimg {
+    float: right;
+    margin-right: 8%;
+}
+
+.cleaner {
+    overflow: hidden;
+}
+
+td div button {
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+
+td div a {
+    color: #1075d4;
+    transition: all 1s;
+    border-left: 4px transparent solid;
+    padding-left: 0.3%;
+}
+
+td div a:hover {
+    text-decoration: none;
+    color: #083866;
+    border-left: 4px rgb(78, 78, 231) solid;
+    padding-left: 0.3%;
+}
+
+dd div a {
+    color: #1075d4;
+    transition: all 1s;
+    border-left: 3px transparent solid;
+    padding-left: 0.3%;
+}
+
+dd div a:hover {
+    text-decoration: none;
+    color: #083866;
+    border-left: 3px rgb(78, 78, 231) solid;
+    padding-left: 0.3%;
+}
+
+h2 {
+    color: #0099cc;
+    border-left: 6px rgb(78, 78, 231) solid;
+    padding-left: 0.3%;
+}
 /* ==========================================================================
 make sure browsers use the pointer cursor for anchors, even with no href
 ========================================================================== */

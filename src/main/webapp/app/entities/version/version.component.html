@@ -1,11 +1,8 @@
 <div>
     <h2>
         <span jhiTranslate="manaProjectApp.version.home.title">Versions</span>
-        <button class="btn btn-primary float-right jh-create-entity create-version" [routerLink]="['/', { outlets: { popup: ['version-new'] } }]">
+        <button class="btn btn-create float-right jh-create-entity create-version" [routerLink]="['/', { outlets: { popup: ['version-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="manaProjectApp.version.home.createLabel">
-            Create new Version
-            </span>
         </button>
     </h2>
     <jhi-alert></jhi-alert>
@@ -42,23 +39,25 @@
                             <button type="submit"
                                     [routerLink]="['../version', version.id ]"
                                     class="btn btn-info btn-sm">
-                                <span class="fa fa-eye"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                                <span class="fa fa-eye fa-lg"></span>
+                                
                             </button>
-                            <button type="submit"
-                                    [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/edit'} }]"
-                                    replaceUrl="true"
-                                    class="btn btn-primary btn-sm">
-                                <span class="fa fa-pencil"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
-                            </button>
-                            <button type="submit"
-                                    [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/delete'} }]"
-                                    replaceUrl="true"
-                                    class="btn btn-danger btn-sm">
-                                <span class="fa fa-remove"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
-                            </button>
+                            <span *ngIf="(currentAccount.lastName === 'System') || (currentAccount.lastName === 'Administrator') || (version.projectid.user.id === currentAccount.id)">
+                                <button type="submit"
+                                        [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/edit'} }]"
+                                        replaceUrl="true"
+                                        class="btn btn-primary btn-sm">
+                                    <span class="fa fa-pencil fa-lg"></span>
+                                    
+                                </button>
+                                <button type="submit"
+                                        [routerLink]="['/', { outlets: { popup: 'version/'+ version.id + '/delete'} }]"
+                                        replaceUrl="true"
+                                        class="btn btn-danger btn-sm">
+                                    <span class="fa fa-trash fa-lg"></span>
+                                    
+                                </button>
+                            </span>
                         </div>
                     </td>
                 </tr>

@@ -47,22 +47,22 @@
                         <button type="submit"
                                 [routerLink]="['../user-management', user.login]"
                                 class="btn btn-info btn-sm">
-                            <span class="fa fa-eye"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            <span class="fa fa-eye fa-lg"></span>
+                            
                         </button>
                         <button type="submit"
                                 [routerLink]="['/', { outlets: { popup: 'user-management/'+ user.login + '/edit'} }]"
                                 replaceUrl="true"
                                 class="btn btn-primary btn-sm">
-                            <span class="fa fa-pencil"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            <span class="fa fa-pencil fa-lg"></span>
+                            
                         </button>
                         <button type="submit"
                                 [routerLink]="['/', { outlets: { popup: 'user-management/'+ user.login + '/delete'} }]"
                                 replaceUrl="true"
                                 class="btn btn-danger btn-sm" [disabled]="currentAccount.login === user.login">
-                            <span class="fa fa-remove"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            <span class="fa fa-trash fa-lg"></span>
+                            
                         </button>
                     </div>
                 </td>

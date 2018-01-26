@@ -37,7 +37,7 @@
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="manaProjectApp.project.picture" for="field_picture">Picture</label>
             <input type="text" class="form-control" name="picture" id="field_picture"
-                [(ngModel)]="project.picture" required />
+                [(ngModel)]="project.picture" />
             <div [hidden]="!(editForm.controls.picture?.dirty && editForm.controls.picture?.invalid)">
                 <small class="form-text text-danger"
                    [hidden]="!editForm.controls.picture?.errors?.required" jhiTranslate="entity.validation.required">

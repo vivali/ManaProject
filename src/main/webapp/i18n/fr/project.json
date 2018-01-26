@@ -17,6 +17,7 @@
             },
             "title": "Titre",
             "description": "Description",
+            "no-picture": "Pas d'image utilisé",
             "picture": "Photo",
             "manday": "Jours-hommes",
             "referent": "Référent",

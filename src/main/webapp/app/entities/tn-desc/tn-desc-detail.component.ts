@@ -6,6 +6,8 @@ import { JhiEventManager } from 'ng-jhipster';
 import { TnDesc } from './tn-desc.model';
 import { TnDescService } from './tn-desc.service';
 
+import { Principal } from '../../shared';
+
 @Component({
     selector: 'jhi-tn-desc-detail',
     templateUrl: './tn-desc-detail.component.html'
@@ -15,17 +17,22 @@ export class TnDescDetailComponent implements OnInit, OnDestroy {
     tnDesc: TnDesc;
     private subscription: Subscription;
     private eventSubscriber: Subscription;
+    currentAccount: any;
 
     constructor(
         private eventManager: JhiEventManager,
         private tnDescService: TnDescService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private principal: Principal
     ) {
     }
 
     ngOnInit() {
         this.subscription = this.route.params.subscribe((params) => {
             this.load(params['id']);
+        });
+        this.principal.identity().then((account) => {
+            this.currentAccount = account;
         });
         this.registerChangeInTnDescs();
     }

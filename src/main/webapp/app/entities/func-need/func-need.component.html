@@ -1,11 +1,8 @@
 <div>
     <h2>
         <span jhiTranslate="manaProjectApp.funcNeed.home.title">Func Needs</span>
-        <button class="btn btn-primary float-right jh-create-entity create-func-need" [routerLink]="['/', { outlets: { popup: ['func-need-new'] } }]">
+        <button class="btn btn-create float-right jh-create-entity create-func-need" [routerLink]="['/', { outlets: { popup: ['func-need-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="manaProjectApp.funcNeed.home.createLabel">
-            Create new Func Need
-            </span>
         </button>
     </h2>
     <jhi-alert></jhi-alert>
@@ -30,22 +27,22 @@
                         <button type="submit"
                                 [routerLink]="['../func-need', funcNeed.id ]"
                                 class="btn btn-info btn-sm">
-                            <span class="fa fa-eye"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            <span class="fa fa-eye fa-lg"></span>
+                            
                         </button>
                         <button type="submit"
                                 [routerLink]="['/', { outlets: { popup: 'func-need/'+ funcNeed.id + '/edit'} }]"
                                 replaceUrl="true"
                                 class="btn btn-primary btn-sm">
-                            <span class="fa fa-pencil"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            <span class="fa fa-pencil fa-lg"></span>
+                            
                         </button>
                         <button type="submit"
                                 [routerLink]="['/', { outlets: { popup: 'func-need/'+ funcNeed.id + '/delete'} }]"
                                 replaceUrl="true"
                                 class="btn btn-danger btn-sm">
-                            <span class="fa fa-remove"></span>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            <span class="fa fa-trash fa-lg"></span>
+                            
                         </button>
                     </div>
                 </td>

@@ -1,17 +1,55 @@
 <div>
     <h2>
         <span jhiTranslate="manaProjectApp.project.home.title">Projects</span>
-        <button *jhiHasAnyAuthority="'ROLE_PMANAGER'"  class="btn btn-primary float-right jh-create-entity create-project" [routerLink]="['/', { outlets: { popup: ['project-new'] } }]">
+        <button *jhiHasAnyAuthority="'ROLE_PMANAGER'"  class="btn btn-create float-right jh-create-entity create-project" [routerLink]="['/', { outlets: { popup: ['project-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span jhiTranslate="manaProjectApp.project.home.createLabel">
-            Create new Project
-            </span>
         </button>
     </h2>
     <jhi-alert></jhi-alert>
     <div class="row">
     </div>
     <br/>
+    <!-- <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-table"></i></div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer small text-muted"></div>
+          </div> -->
     <div class="table-responsive" *ngIf="projects">
         <table class="table table-striped">
             <thead>
@@ -32,7 +70,8 @@
                 <td><a [routerLink]="['../project', project.id ]">{{project.id}}</a></td>
                 <td>{{project.title}}</td>
                 <td>{{project.description}}</td>
-                <td>{{project.picture}}</td>
+                <td *ngIf="project.picture">{{project.picture}}</td>
+                <td *ngIf="!project.picture" jhiTranslate="manaProjectApp.project.no-picture">No picture used</td>
                 <td>{{project.manday}}</td>
                 <td>{{project.referent}}</td>
                 <td>{{project.year}}</td>
@@ -45,8 +84,8 @@
                             <button type="submit"
                                     [routerLink]="['../project', project.id ]"
                                     class="btn btn-info btn-sm">
-                                <span class="fa fa-eye"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                                <span class="fa fa-eye fa-lg"></span>
+                                
                             </button>
                         </span>
                         <span *ngIf="(currentAccount.lastName === 'System') || (currentAccount.lastName === 'Administrator') || (project.user.id === currentAccount.id)">
@@ -55,8 +94,8 @@
                                     replaceUrl="true"
                                     class="btn btn-primary btn-sm"
                                 >
-                                <span class="fa fa-pencil"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                                <span class="fa fa-pencil fa-lg"></span>
+                                
                             </button>
                         </span>
                         <span *ngIf="(currentAccount.lastName === 'System') || (currentAccount.lastName === 'Administrator') || (project.user.id === currentAccount.id)">
@@ -64,8 +103,8 @@
                                     [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/delete'} }]"
                                     replaceUrl="true"
                                     class="btn btn-danger btn-sm">
-                                <span class="fa fa-remove"></span>
-                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                                <span class="fa fa-trash fa-lg"></span>
+                                
                             </button>
                         </span>
                     </div>

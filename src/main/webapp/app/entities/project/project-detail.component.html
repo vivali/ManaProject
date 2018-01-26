@@ -4,6 +4,13 @@
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
+        <div class="ddimg"> 
+            <dt><span jhiTranslate="manaProjectApp.project.picture">Picture</span></dt>
+            <dd>
+                <span *ngIf="project.picture">{{project.picture}}</span>
+                <span *ngIf="!project.picture" jhiTranslate="manaProjectApp.project.no-picture">No picture used</span>
+            </dd>
+        </div>
         <dt><span jhiTranslate="manaProjectApp.project.title">Title</span></dt>
         <dd>
             <span>{{project.title}}</span>
@@ -11,10 +18,6 @@
         <dt><span jhiTranslate="manaProjectApp.project.description">Description</span></dt>
         <dd>
             <span>{{project.description}}</span>
-        </dd>
-        <dt><span jhiTranslate="manaProjectApp.project.picture">Picture</span></dt>
-        <dd>
-            <span>{{project.picture}}</span>
         </dd>
         <dt><span jhiTranslate="manaProjectApp.project.manday">Manday</span></dt>
         <dd>
@@ -24,6 +27,14 @@
         <dd>
             <span>{{project.referent}}</span>
         </dd>
+        <!-- <div class="card mb-3 ddimg" #target>
+            <div class="card-header">
+                <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+            <div class="card-body">
+                <canvas id="myPieChart" width="100%" height="100"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div> -->
         <dt><span jhiTranslate="manaProjectApp.project.year">Year</span></dt>
         <dd>
             <span>{{project.year}}</span>
@@ -44,7 +55,7 @@
                 [routerLink]="['/', { outlets: { popup: 'project/'+ project.id + '/edit'} }]"
                 replaceUrl="true"
                 class="btn btn-primary">
-            <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            <span class="fa fa-pencil fa-lg"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
         </button>
     </span>
 </div>
